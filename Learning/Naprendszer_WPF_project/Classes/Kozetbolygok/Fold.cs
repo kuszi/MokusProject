@@ -5,6 +5,10 @@ namespace Naprendszer_WPF_project.Classes.Kozetbolygok
 {
     class Fold : IKozetbolygo
     {
+        public override string ToString()
+        {
+            return "Fold";
+        }
         public int NapotolValoTavolsag
         {
             get

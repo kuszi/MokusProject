@@ -4,6 +4,10 @@ namespace Naprendszer_WPF_project.Classes.Kozetbolygok
 {
     class Venusz : IKozetbolygo
     {
+        public override string ToString()
+        {
+            return "Venusz";
+        }
         public int NapotolValoTavolsag
         {
             get

@@ -4,6 +4,10 @@ namespace Naprendszer_WPF_project.Classes.Csillag
 {
     class Nap : ICsillag
     {
+        public override string ToString()
+        {
+            return "Nap";
+        }
         public int Homerseklet
         {
             get

@@ -5,6 +5,10 @@ namespace Naprendszer_WPF_project.Classes.Gazbolygok
 {
     class Jupiter : IGazbolygo
     {
+        public override string ToString()
+        {
+            return "Jupiter";
+        }
         public int NapotolValoTavolsag
         {
             get

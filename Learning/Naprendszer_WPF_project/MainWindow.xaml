@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" Tag="1 - Naprendszer"/>
+            <ColumnDefinition Width="*" Tag="2 - Tulajdonságok"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="10" Orientation="Vertical">
+
+           
+            <ComboBox ItemsSource="{Binding Naprendszer}" SelectedItem="{Binding SelectedNaprendszer}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10" Orientation="Vertical">
+            <TextBlock Text="{Binding Planeta}"/>
+        </StackPanel>
+
     </Grid>
 </Window>
