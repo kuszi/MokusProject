@@ -14,7 +14,7 @@
         <StackPanel Grid.Column="0" Margin="10" Orientation="Vertical">
 
            
-            <ComboBox ItemsSource="{Binding Naprendszer}" SelectedItem="{Binding SelectedNaprendszer}"/>
+            <ListBox ItemsSource="{Binding Naprendszer}" SelectedItem="{Binding SelectedNaprendszer}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10" Orientation="Vertical">
             <TextBlock Text="{Binding Planeta}"/>
