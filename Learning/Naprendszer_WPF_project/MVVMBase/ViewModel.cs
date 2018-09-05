@@ -1,8 +1,4 @@
 ﻿using Naprendszer_WPF_project.Classes;
-using Naprendszer_WPF_project.Classes.Csillag;
-using Naprendszer_WPF_project.Classes.Gazbolygok;
-using Naprendszer_WPF_project.Classes.Holdak;
-using Naprendszer_WPF_project.Classes.Kozetbolygok;
 using Naprendszer_WPF_project.Interfaces;
 using Naprendszer_WPF_project.Interfaces.Planéták;
 using System.Collections.ObjectModel;
@@ -22,6 +18,21 @@ namespace Naprendszer_WPF_project.MVVMBase
                 OnPropertyChanged();
             }
         }
+
+        private int _ugarmerete;
+        public int Sugarmerete
+        {
+            get { return _ugarmerete; }
+            set
+            {
+                _ugarmerete = value;
+                OnPropertyChanged();
+            }
+        }
+       
+
+
+
         #endregion
 
         #region Collection
@@ -32,6 +43,17 @@ namespace Naprendszer_WPF_project.MVVMBase
             set
             {
                 _naprendszer = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<ICsillag> _csillag;
+        public ObservableCollection<ICsillag> Csillag
+        {
+            get { return _csillag; }
+            set
+            {
+                _csillag = value;
                 OnPropertyChanged();
             }
         }
@@ -65,16 +87,34 @@ namespace Naprendszer_WPF_project.MVVMBase
             }
         }
         #endregion
+        #region Selected Naprednszer
+        private ICsillag _selectedCsillag;
+        public ICsillag SelectedCsillag
+        {
+            get { return _selectedCsillag; }
+            set
+            {
+                _selectedNaprendszer = value;
+                OnPropertyChanged();
+                
+
+            }
+        }
+        #endregion
 
 
         public ViewModel()
         {
             Naprendszer = new ObservableCollection<INaprendszer>();
-            Naprendszer.Add(new Csillag());
+            Naprendszer.Add(new Csillag("Nap", 6000, 100000));
             Naprendszer.Add(new Kozetbolyok());
             Naprendszer.Add(new Gazbolygok());
             Naprendszer.Add(new Holdak());
-           
+            SelectedNaprendszer = Naprendszer[0];
+
+
+            Csillag = new ObservableCollection<ICsillag>();
+            Csillag.Add(new Csillag());
 
 
             //Naprendszer.Add(new Merkur());
@@ -93,7 +133,7 @@ namespace Naprendszer_WPF_project.MVVMBase
             //Naprendszer.Add(new Pandora());
             //Naprendszer.Add(new Titan());
             //Naprendszer.Add(new Phoebe());
-            SelectedNaprendszer = Naprendszer[0];
+          
 
         }
     }
