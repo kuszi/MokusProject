@@ -65,25 +65,7 @@
     </Compile>
     <Compile Include="Classes\Csillag.cs" />
     <Compile Include="Classes\Gazbolygok.cs" />
-    <Compile Include="Classes\Gazbolygok_mappa\Jupiter.cs" />
-    <Compile Include="Classes\Gazbolygok_mappa\Neptunusz.cs" />
-    <Compile Include="Classes\Gazbolygok_mappa\Szaturnusz.cs" />
-    <Compile Include="Classes\Gazbolygok_mappa\Uranusz.cs" />
     <Compile Include="Classes\Holdak.cs" />
-    <Compile Include="Classes\Holdak_mappa\Kalliszto.cs" />
-    <Compile Include="Classes\Holdak_mappa\Deimosz.cs" />
-    <Compile Include="Classes\Holdak_mappa\Europe.cs" />
-    <Compile Include="Classes\Holdak_mappa\Hold.cs" />
-    <Compile Include="Classes\Holdak_mappa\Io.cs" />
-    <Compile Include="Classes\Holdak_mappa\Pandora.cs" />
-    <Compile Include="Classes\Holdak_mappa\Phobosz.cs" />
-    <Compile Include="Classes\Holdak_mappa\Phoebe.cs" />
-    <Compile Include="Classes\Holdak_mappa\Titan.cs" />
-    <Compile Include="Classes\Kozetbolygok_mappa\Fold.cs" />
-    <Compile Include="Classes\Kozetbolygok_mappa\Mars.cs" />
-    <Compile Include="Classes\Kozetbolygok_mappa\Merkur.cs" />
-    <Compile Include="Classes\Csillag_mappa\Nap.cs" />
-    <Compile Include="Classes\Kozetbolygok_mappa\Venusz.cs" />
     <Compile Include="Classes\Kozetbolyok.cs" />
     <Compile Include="Interfaces\INaprendszer.cs" />
     <Compile Include="Interfaces\Planéták\Bolgyók\IGazbolygo.cs" />

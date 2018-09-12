@@ -19,13 +19,13 @@ namespace Naprendszer_WPF_project.MVVMBase
             }
         }
 
-        private int _ugarmerete;
+        private int _sugarmerete;
         public int Sugarmerete
         {
-            get { return _ugarmerete; }
+            get { return _sugarmerete; }
             set
             {
-                _ugarmerete = value;
+                _sugarmerete = value;
                 OnPropertyChanged();
             }
         }
@@ -107,9 +107,23 @@ namespace Naprendszer_WPF_project.MVVMBase
         {
             Naprendszer = new ObservableCollection<INaprendszer>();
             Naprendszer.Add(new Csillag("Nap", 6000, 100000));
-            Naprendszer.Add(new Kozetbolyok());
-            Naprendszer.Add(new Gazbolygok());
-            Naprendszer.Add(new Holdak());
+            Naprendszer.Add(new Kozetbolyok("Jupiter", 50000, 5000));
+            Naprendszer.Add(new Kozetbolyok("Neptunusz", 80000, 1500));
+            Naprendszer.Add(new Kozetbolyok("Szaturnusz", 60000, 3000));
+            Naprendszer.Add(new Kozetbolyok("Uránusz", 70000, 2000));
+            Naprendszer.Add(new Gazbolygok("Fold", 30000, 1500));
+            Naprendszer.Add(new Gazbolygok("Mars", 40000, 600));
+            Naprendszer.Add(new Gazbolygok("Merkur", 10000, 500));
+            Naprendszer.Add(new Gazbolygok("Venusz", 20000,1000));
+            Naprendszer.Add(new Holdak("Deimosz"));
+            Naprendszer.Add(new Holdak("Europe"));
+            Naprendszer.Add(new Holdak("Hold"));
+            Naprendszer.Add(new Holdak("Io"));
+            Naprendszer.Add(new Holdak("Kalliszto"));
+            Naprendszer.Add(new Holdak("Pandora"));
+            Naprendszer.Add(new Holdak("Phobosz"));
+            Naprendszer.Add(new Holdak("Phoebe"));
+            Naprendszer.Add(new Holdak("Titan"));
             SelectedNaprendszer = Naprendszer[0];
 
 
@@ -117,24 +131,7 @@ namespace Naprendszer_WPF_project.MVVMBase
             Csillag.Add(new Csillag());
 
 
-            //Naprendszer.Add(new Merkur());
-            //Naprendszer.Add(new Venusz());
-            //Naprendszer.Add(new Fold());
-            //Naprendszer.Add(new Mars());
-            //Naprendszer.Add(new Jupiter());
-            //Naprendszer.Add(new Szaturnusz());
-            //Naprendszer.Add(new Neptunusz());
-            //Naprendszer.Add(new Hold());
-            //Naprendszer.Add(new Phobosz());
-            //Naprendszer.Add(new Deimosz());
-            //Naprendszer.Add(new Io());
-            //Naprendszer.Add(new Europe());
-            //Naprendszer.Add(new Kalliszto());
-            //Naprendszer.Add(new Pandora());
-            //Naprendszer.Add(new Titan());
-            //Naprendszer.Add(new Phoebe());
-          
-
+           
         }
     }
 }
