@@ -5,6 +5,13 @@ namespace Naprendszer_WPF_project.Classes
 {
     class Holdak : IHold
     {
+        private string v;
+
+        public Holdak(string v)
+        {
+            this.v = v;
+        }
+
         public string PlanetaNeve
         {
             get

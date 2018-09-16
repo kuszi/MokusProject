@@ -29,11 +29,18 @@ namespace Naprendszer_WPF_project.MVVMBase
                 OnPropertyChanged();
             }
         }
-       
+
 
 
 
         #endregion
+
+        private INaprendszer _nev;
+        public INaprendszer Nev
+        {
+            get { return _nev; }
+            set { _nev = value; OnPropertyChanged(); }
+        }
 
         #region Collection
         private ObservableCollection<INaprendszer> _naprendszer;
@@ -87,6 +94,7 @@ namespace Naprendszer_WPF_project.MVVMBase
             }
         }
         #endregion
+
         #region Selected Naprednszer
         private ICsillag _selectedCsillag;
         public ICsillag SelectedCsillag
@@ -127,8 +135,8 @@ namespace Naprendszer_WPF_project.MVVMBase
             SelectedNaprendszer = Naprendszer[0];
 
 
-            Csillag = new ObservableCollection<ICsillag>();
-            Csillag.Add(new Csillag());
+           // Csillag = new ObservableCollection<ICsillag>();
+           // Csillag.Add(new Csillag());
 
 
            
