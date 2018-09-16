@@ -13,8 +13,8 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Margin="10" Orientation="Vertical">
 
-           
-            <ListBox ItemsSource="{Binding Naprendszer}" SelectedItem="{Binding SelectedNaprendszer}"/>
+
+            <ListBox ItemsSource="{Binding Naprendszer}"  SelectedItem="{Binding SelectedNaprendszer}"  /> <!--valami nem jó-->
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10" Orientation="Vertical">
             <TextBlock Text="{Binding Planeta}"/>

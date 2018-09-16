@@ -35,11 +35,11 @@ namespace Naprendszer_WPF_project.MVVMBase
 
         #endregion
 
-        private INaprendszer _nev;
-        public INaprendszer Nev
+        private INaprendszer _name;
+        public INaprendszer Name
         {
-            get { return _nev; }
-            set { _nev = value; OnPropertyChanged(); }
+            get { return _name; }
+            set { _name = value; OnPropertyChanged(); }
         }
 
         #region Collection
@@ -54,19 +54,20 @@ namespace Naprendszer_WPF_project.MVVMBase
             }
         }
 
-        private ObservableCollection<ICsillag> _csillag;
-        public ObservableCollection<ICsillag> Csillag
-        {
-            get { return _csillag; }
-            set
-            {
-                _csillag = value;
-                OnPropertyChanged();
-            }
-        }
+        //private ObservableCollection<ICsillag> _csillag;
+        //public ObservableCollection<ICsillag> Csillag
+        //{
+        //    get { return _csillag; }
+        //    set
+        //    {
+        //        _csillag = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
         #endregion
 
         #region Selected Naprednszer
+        //tehát itt mondom meg hogy az adott nevű égitest milyen típus
         private INaprendszer _selectedNaprendszer;
         public INaprendszer SelectedNaprendszer
         {
@@ -90,25 +91,32 @@ namespace Naprendszer_WPF_project.MVVMBase
                 {
                     Planeta = "hold";
                 }
+                var nevKiiras = SelectedNaprendszer as INaprendszer;
+                if (nevKiiras != null)
+                {
+                   // Naprendszer.Add.
+                    //this.Name = Name;
+                    //Name= nem tudom
+                }
 
             }
         }
         #endregion
 
-        #region Selected Naprednszer
-        private ICsillag _selectedCsillag;
-        public ICsillag SelectedCsillag
-        {
-            get { return _selectedCsillag; }
-            set
-            {
-                _selectedNaprendszer = value;
-                OnPropertyChanged();
+        //#region Selected Naprednszer
+        //private ICsillag _selectedCsillag;
+        //public ICsillag SelectedCsillag
+        //{
+        //    get { return _selectedCsillag; }
+        //    set
+        //    {
+        //        _selectedNaprendszer = value;
+        //        OnPropertyChanged();
                 
 
-            }
-        }
-        #endregion
+        //    }
+        //}
+        //#endregion
 
 
         public ViewModel()
