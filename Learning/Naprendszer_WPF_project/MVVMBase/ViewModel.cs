@@ -94,9 +94,10 @@ namespace Naprendszer_WPF_project.MVVMBase
                 var nevKiiras = SelectedNaprendszer as INaprendszer;
                 if (nevKiiras != null)
                 {
-                   // Naprendszer.Add.
+                    // Naprendszer.Add.
                     //this.Name = Name;
                     //Name= nem tudom
+                    
                 }
 
             }

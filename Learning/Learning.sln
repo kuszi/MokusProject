@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeWpf", "WelcomeWpf\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naprendszer_WPF_project", "Naprendszer_WPF_project\Naprendszer_WPF_project.csproj", "{D88DEA6F-7BF7-40AA-B75A-F19B30934F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanulosIsmetlesCOREhoz", "TanulosIsmetlesCOREhoz\TanulosIsmetlesCOREhoz.csproj", "{03E03C29-03F8-4F43-B734-F3AEA8C14E17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D88DEA6F-7BF7-40AA-B75A-F19B30934F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D88DEA6F-7BF7-40AA-B75A-F19B30934F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D88DEA6F-7BF7-40AA-B75A-F19B30934F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
