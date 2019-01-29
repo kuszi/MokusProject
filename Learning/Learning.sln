@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naprendszer_WPF_project", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanulosIsmetlesCOREhoz", "TanulosIsmetlesCOREhoz\TanulosIsmetlesCOREhoz.csproj", "{03E03C29-03F8-4F43-B734-F3AEA8C14E17}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "simalogika", "simalogika", "{C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logika", "logika\logika.csproj", "{EF1B8609-EAFF-4617-BF38-CF1616D2D45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E03C29-03F8-4F43-B734-F3AEA8C14E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1B8609-EAFF-4617-BF38-CF1616D2D45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1B8609-EAFF-4617-BF38-CF1616D2D45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1B8609-EAFF-4617-BF38-CF1616D2D45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1B8609-EAFF-4617-BF38-CF1616D2D45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF1B8609-EAFF-4617-BF38-CF1616D2D45F} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBDB65E7-F22D-49A3-A40E-8152B4F0B339}
