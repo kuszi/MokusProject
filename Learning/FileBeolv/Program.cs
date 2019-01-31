@@ -28,7 +28,7 @@ namespace FileBeolv
             string data = sr.ReadLine();
             while (data != null)
             {
-                Console.WriteLine(data);
+               // Console.WriteLine(data);
                
                 var values = data.Split(',');
                 int aszam, bszam, osszeguk;
@@ -37,11 +37,20 @@ namespace FileBeolv
                 var osszeg = int.TryParse(values[2], out osszeguk);
                 data = sr.ReadLine();
 
+                int cszam=aszam+bszam;
+                if (cszam!=osszeguk)
+                {
+                    Console.WriteLine($"Helyes {data}");
+                }
+                else
+                {
 
-
-
+                    Console.WriteLine($"Helytelen {data}");
+                }
 
             }
+
+
             Console.ReadKey();
         }
 
