@@ -40,16 +40,17 @@ namespace FileBeolv
                 int cszam=aszam+bszam;
                 if (cszam!=osszeguk)
                 {
-                    Console.WriteLine($"Helyes {data}");
+                    Console.WriteLine($"{aszam} + {bszam} = {osszeguk} Helytelen");
                 }
                 else
                 {
 
-                    Console.WriteLine($"Helytelen {data}");
+                    Console.WriteLine($"{aszam} + {bszam} = {osszeguk} Helyes");
                 }
 
             }
-
+            sr.Close();
+            sr.Dispose();
 
             Console.ReadKey();
         }
