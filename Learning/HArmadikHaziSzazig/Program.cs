@@ -25,25 +25,25 @@ namespace HArmadikHaziSzazig
             {
                 lista.Add(rnd.Next(0, 100));//közeben pedig meghatározom hogy ezek a számok 0 és 100 közöttiek legyenek
             }
-           
+
+            int a = 0;
+            int b = 0;
             foreach (int i in lista)
             {
-                Console.Write("{0}, ", i);//kiiratom az ossze olya i számot ami benn van a listában
-                //int a = 0;
-                //int b = 0;
-                //if (i >= 50)
-                //{
-                //    a++;
-                    
-                //}
-                //else
-                //{
-                //    b++;
-                   
-                //}
-                //Console.WriteLine($"50 nél kisebb számok: {b}db ");
-                //Console.WriteLine($"50 nél nagyobb számok: {a}db ");
+               // Console.Write("{0}, ", i);//kiiratom az ossze olya i számot ami benn van a listában
+               
+                if (i >= 50)
+                {
+                    a++;                    
+                }
+               else
+                {
+                    b++;                   
+                }
+               
             }
+            Console.WriteLine($"50 nél kisebb számok: {b}db ");
+            Console.WriteLine($"50 nél nagyobb számok: {a}db ");
             Console.ReadKey();
         }
     }
