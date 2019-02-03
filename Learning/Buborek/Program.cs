@@ -39,12 +39,14 @@ namespace Buborek
             for (int i = n - 1; i > 0; i--) //veszem az utolsó előtti elemet, majd megvizsgálom hogy az nagyobb e mint 0, majd  egyel előtte lévő elemet nézem
             {
                 for (int j = 0; j < i; j++)//új változót vezetek be ami t, megvizsgálok hogy kisebb e mint az i elem, majd növelem eggyel
+                {
                     if (block[j] > block[j + 1])//ha a több j-eig elem nagyobb mint a több j+1 eleme akkor
                     {
                         int b = block[j + 1];//be kell vezetni egy új változót hogy elvégezhető legyen a csere, jelen esetben b egyenlő lesz a tömb j+1 elemével mert az nagyobb mint j
                         block[j + 1] = block[j];
                         block[j] = b;
                     }
+                }
             }
             //Console.WriteLine();
 
