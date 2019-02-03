@@ -28,8 +28,12 @@ namespace ABValtozo
             if (A > B)
             {
                 Console.WriteLine($"A éréke nagyobb mint B, ezért felcseréljünk őket.");
+                int C = 0;
+                C = A;
                 A = B;
-                Console.WriteLine($"A új értéke: {A}");
+                B = C;
+
+                Console.WriteLine($"A és B új értéke: A = {A} és B = {B}. ");
             }
             else
             {
