@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HArmadikHaziSzazig", "HArma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreHazi_Logika", "CoreHazi_Logika\CoreHazi_Logika.csproj", "{45230069-4B79-4532-B465-6D581D2C959E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABValtozo", "ABValtozo\ABValtozo.csproj", "{86269430-276B-42C4-B967-0D1224573BDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{45230069-4B79-4532-B465-6D581D2C959E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45230069-4B79-4532-B465-6D581D2C959E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45230069-4B79-4532-B465-6D581D2C959E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86269430-276B-42C4-B967-0D1224573BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86269430-276B-42C4-B967-0D1224573BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86269430-276B-42C4-B967-0D1224573BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86269430-276B-42C4-B967-0D1224573BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{743D7746-07A8-4649-BB79-01D91E847422} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 		{6C32BCC0-6E27-48DE-BF7A-98DB31BA875A} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 		{45230069-4B79-4532-B465-6D581D2C959E} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
+		{86269430-276B-42C4-B967-0D1224573BDA} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBDB65E7-F22D-49A3-A40E-8152B4F0B339}
