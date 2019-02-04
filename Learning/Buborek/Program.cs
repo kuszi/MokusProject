@@ -32,7 +32,7 @@ namespace Buborek
             for (int a = 0; a < n; a++)//feltöltöm a tömb elmeit random számokkal
             {
                 block[a] = rnd.Next(0, 1000);
-                // Console.Write("{0} ", block[a]); //Kiíratás rendezés előtt
+                Console.Write("{0} ", block[a]); //Kiíratás rendezés előtt
             }
 
             ////Buborék rendezés
@@ -48,7 +48,7 @@ namespace Buborek
                     }
                 }
             }
-            //Console.WriteLine();
+            Console.WriteLine();
 
             //Kiíratás rendezés után
             for (int c = 0; c < n; c++)
