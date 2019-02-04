@@ -49,7 +49,7 @@ namespace Buborek894
         {
             for (int c = 0; c < n; c++)
             {
-                Console.Write("{0} ", block[c]);
+                //Console.Write("{0} ", block[c]);
 
                 if (block[c] != 894)
                 {
@@ -66,7 +66,7 @@ namespace Buborek894
             for (int a = 0; a < n; a++)
             {
                 block[a] = rnd.Next(0, 1000);
-                Console.Write("{0} ", block[a]);
+              //  Console.Write("{0} ", block[a]);
                 if (block[a] != 894)
                 {
                     kelott++;
@@ -76,7 +76,7 @@ namespace Buborek894
                     int k = 0;
                     k = kelott;
 
-                    Console.WriteLine($"{kelott}. helyen áll.");
+                    Console.Write($"{kelott}. helyen áll.");
                 }
                
             }
