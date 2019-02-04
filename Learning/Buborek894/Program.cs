@@ -13,59 +13,26 @@ namespace Buborek894
         //   lesz 894 érték seed értelme, ugyan azok a random számok       
         //    rendezés előtt meg kell keresni hogy a 894 hol van a tömbben, milyen index, majd rendezem és megmondom hol van
 
-        #region próbálkozás
-        //static void RunIntNDoubleRandoms(Random randObj)
-        //{
-        //    // Generate the first six random integers.
-        //    for (int j = 0; j < 6; j++)
-        //        Console.Write(" {0,10} ", randObj.Next());
-        //    Console.WriteLine();
-        //}
-
-        //static void FixedSeedRandoms(int seed)
-        //{
-        //    Console.WriteLine(
-        //        "\nRandom numbers from a Random object with " +
-        //        "seed = {0}:", seed);
-        //    Random fixRand = new Random(seed);
-
-        //    RunIntNDoubleRandoms(fixRand);
-        //}
-        
-        #endregion
-
         static void Main(string[] args)
         {
-           
-            var seed = 25;//nekem ez nem működik.....
-//var random = new Random(seed);
-       //     var rnd = new Random(seed);
+            var seed = 25;//seed értéke
             Random rnd = new Random(seed);//seed /ugyan azon random értékek
             int[] block = new int[10];
             int n = block.Length;
-            int k = 0;//ő lesz a kulcs elem, ha nem egyenlő a block[a] 894-el akkor k-t növelem
+            int kelott = 0;//ő lesz a kulcs elem, ha nem egyenlő a block[a] 894-el akkor k-t növelem
+            int kutan = 0;
 
+            kelott = RandomFixnumberBefore(rnd, block, n, kelott);
 
-            for (int a = 0; a < n; a++)
-            {
-                block[a] = rnd.Next(0, 1000);            
-                                
-                if (block[a] != 894)
-                {
-                    k++;
-                }
-                Console.Write("894 szám a {0}. helyen áll. ", k); //ezen a helyen áll a 894
-            }
-                      
-
+            Console.WriteLine();
             ////Buborék rendezés
-            for (int i = n - 1; i > 0; i--) //veszem az utolsó előtti elemet, majd megvizsgálom hogy az nagyobb e mint 0, majd  egyel előtte lévő elemet nézem
+            for (int i = n - 1; i > 0; i--)
             {
-                for (int j = 0; j < i; j++)//új változót vezetek be ami t, megvizsgálok hogy kisebb e mint az i elem, majd növelem eggyel
+                for (int j = 0; j < i; j++)
                 {
-                    if (block[j] > block[j + 1])//ha a több j-eig elem nagyobb mint a több j+1 eleme akkor
+                    if (block[j] > block[j + 1])
                     {
-                        int b = block[j + 1];//be kell vezetni egy új változót hogy elvégezhető legyen a csere, jelen esetben b egyenlő lesz a tömb j+1 elemével mert az nagyobb mint j
+                        int b = block[j + 1];
                         block[j + 1] = block[j];
                         block[j] = b;
                     }
@@ -73,23 +40,50 @@ namespace Buborek894
             }
 
             //Kiíratás rendezés után
-            for (int c = 0; c < n; c++)
-            {
-                Console.Write("{0} ", block[c]);
-                for (int o = 0; o < n; o++)
-                {
-                    if (block[o] != 894)
-                    {
-                        k++;
-                    }
-                    Console.Write("894 szám a {0}. helyen áll a rendezés után. ", k); //ezen a helyen áll a 894
-                }
-            }
+            kutan = FixRandomNumberAfter(block, n, kutan);
 
             Console.ReadKey();
         }
 
+        private static int FixRandomNumberAfter(int[] block, int n, int kutan)
+        {
+            for (int c = 0; c < n; c++)
+            {
+                Console.Write("{0} ", block[c]);
+
+                if (block[c] != 894)
+                {
+                    kutan++;
+                }
+
+            }
+            Console.WriteLine($"{kutan}. helyen áll.");
+            return kutan;
+        }
+
+        private static int RandomFixnumberBefore(Random rnd, int[] block, int n, int kelott)
+        {
+            for (int a = 0; a < n; a++)
+            {
+                block[a] = rnd.Next(0, 1000);
+                Console.Write("{0} ", block[a]);
+                if (block[a] != 894)
+                {
+                    kelott++;
+                }
+                else
+                {
+                    int k = 0;
+                    k = kelott;
+
+                    Console.WriteLine($"{kelott}. helyen áll.");
+                }
+               
+            }
+
+            return kelott;
+        }
+
 
     }
-}
 }
