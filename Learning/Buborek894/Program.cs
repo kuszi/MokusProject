@@ -92,7 +92,7 @@ namespace Buborek894
             int[] block = new int[10];
             int n = block.Length;
 
-            int k = 0;
+            int k = 1;
             int kk = 0;
             int kkk = 0;
 
@@ -127,13 +127,14 @@ namespace Buborek894
                     }
                 }
             }
-
+            k = 1;
             for (int c = 0; c < n; c++)
             {
+               
                 Console.Write("{0} ", block[c]);
                 if (block[c] != 894)
                 {
-                    k++;
+                   k++;
                 }
                 else
                 {
