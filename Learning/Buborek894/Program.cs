@@ -8,11 +8,6 @@ namespace Buborek894
 {
     class Program
     {
-        //   new random(25);				 
-        //10 elemű tömb = random 0,1000
-        //   lesz 894 érték seed értelme, ugyan azok a random számok       
-        //    rendezés előtt meg kell keresni hogy a 894 hol van a tömbben, milyen index, majd rendezem és megmondom hol van
-
         static void Main(string[] args)
         {
             #region regi
@@ -87,33 +82,102 @@ namespace Buborek894
 
             #endregion
 
+            #region refektor előtt, de amúgy nem jó CSaba amit mondasz mert kell még egy +1 hiszen nem a 3. és 8 helyen van
+
+            //var seed = 25;
+            //Random rnd = new Random(seed);
+            //int[] block = new int[10];
+            //int n = block.Length;
+
+            //int k = 1;
+            //int kk = 0;
+            //int kkk = 0;
+
+
+            ////Feltöltöm a tömböt random számokkal
+            //for (int a = 0; a < n; a++)
+            //{
+            //    block[a] = rnd.Next(0, 1000);
+            //    Console.Write("{0} ", block[a]);
+            //    if (block[a] != 894)
+            //    {
+            //        k++;
+            //    }
+            //    else
+            //    {
+            //        kk = k;
+            //    }
+
+            //}
+
+            //Console.WriteLine();
+            //////Buborék rendezés
+            //for (int i = n - 1; i > 0; i--)
+            //{
+            //    for (int j = 0; j < i; j++)
+            //    {
+            //        if (block[j] > block[j + 1])
+            //        {
+            //            int b = block[j + 1];
+            //            block[j + 1] = block[j];
+            //            block[j] = b;
+            //        }
+            //    }
+            //}
+            //k = 1;
+            //for (int c = 0; c < n; c++)
+            //{
+
+            //    Console.Write("{0} ", block[c]);
+            //    if (block[c] != 894)
+            //    {
+            //        k++;
+            //    }
+            //    else
+            //    {
+            //        kkk = k;
+            //    }
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine($"Rendezés előtt {kk}.");
+            //Console.WriteLine($"Rendezés után {kkk}.");
+            //Console.ReadKey();
+            #endregion
+
+            ///1. A tömb véletlen számmal való feltöltése. Semmi más.
+            //2.Keresés.Ez egy új ciklus.
+            //3.buborék rendezés.
+            //4.Keresés.Megint egy új ciklus.
+            
             var seed = 25;
             Random rnd = new Random(seed);
             int[] block = new int[10];
             int n = block.Length;
 
-            int k = 1;
+            int k = 0;
             int kk = 0;
             int kkk = 0;
 
-
-            //Feltöltöm a tömböt random számokkal
+            //Fel van töltve
             for (int a = 0; a < n; a++)
             {
-                block[a] = rnd.Next(0, 1000);
-                Console.Write("{0} ", block[a]);
-                if (block[a] != 894)
+                block[a] = rnd.Next(0, 1000);                
+            }
+
+            //kell az új ciklus
+            for (int b = 0; b < n; b++)
+            {
+                if (block[b] != 894)
                 {
-                    k++;
+                    k++;                  
                 }
-                else
+                if (block[b] == 894)
                 {
                     kk = k;
                 }
-
             }
-
-            Console.WriteLine();
+           
             ////Buborék rendezés
             for (int i = n - 1; i > 0; i--)
             {
@@ -127,25 +191,21 @@ namespace Buborek894
                     }
                 }
             }
-            k = 1;
+
+            k = 0;
             for (int c = 0; c < n; c++)
             {
-               
-                Console.Write("{0} ", block[c]);
                 if (block[c] != 894)
                 {
-                   k++;
+                    k++;
                 }
-                else
-                {
-                    kkk = k;
-                }
+               kkk = k;
             }
-
-            Console.WriteLine();
+            
             Console.WriteLine($"Rendezés előtt {kk}.");
             Console.WriteLine($"Rendezés után {kkk}.");
             Console.ReadKey();
+
 
         }
 
