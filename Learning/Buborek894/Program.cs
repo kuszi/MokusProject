@@ -15,14 +15,103 @@ namespace Buborek894
 
         static void Main(string[] args)
         {
-            var seed = 25;//seed értéke
-            Random rnd = new Random(seed);//seed /ugyan azon random értékek
+            #region regi
+            //var seed = 25;//seed értéke
+            //Random rnd = new Random(seed);//seed /ugyan azon random értékek
+            //int[] block = new int[10];
+            //int n = block.Length;
+            //int kelott = 0;//ő lesz a kulcs elem, ha nem egyenlő a block[a] 894-el akkor k-t növelem
+            //int kutan = 0;
+
+            //kelott = RandomFixnumberBefore(rnd, block, n, kelott);
+
+            //Console.WriteLine();
+            ////Buborék rendezés
+            //for (int i = n - 1; i > 0; i--)
+            //{
+            //    for (int j = 0; j < i; j++)
+            //    {
+            //        if (block[j] > block[j + 1])
+            //        {
+            //            int b = block[j + 1];
+            //            block[j + 1] = block[j];
+            //            block[j] = b;
+            //        }
+            //    }
+            //}
+
+            //Kiíratás rendezés után
+            // kutan = FixRandomNumberAfter(block, n, kutan);
+
+            //  Console.ReadKey();
+            // }
+
+            //private static int FixRandomNumberAfter(int[] block, int n, int kutan)
+            //{
+            //    for (int c = 0; c < n; c++)
+            //    {
+            //        //Console.Write("{0} ", block[c]);
+
+            //        if (block[c] != 894)
+            //        {
+            //            kutan++;
+            //        }
+
+            //    }
+            //    Console.WriteLine($"{kutan}. helyen áll.");
+            //    return kutan;
+            //}
+
+            //private static int RandomFixnumberBefore(Random rnd, int[] block, int n, int kelott)
+            //{
+            //    for (int a = 0; a < n; a++)
+            //    {
+            //        block[a] = rnd.Next(0, 1000);
+            //      //  Console.Write("{0} ", block[a]);
+            //        if (block[a] != 894)
+            //        {
+            //            kelott++;
+            //        }
+            //        else
+            //        {
+            //            int k = 0;
+            //            k = kelott;
+
+            //            Console.Write($"{kelott}. helyen áll.");
+            //        }
+
+            //    }
+
+            //    return kelott;
+            //}
+
+            #endregion
+
+            var seed = 25;
+            Random rnd = new Random(seed);
             int[] block = new int[10];
             int n = block.Length;
-            int kelott = 0;//ő lesz a kulcs elem, ha nem egyenlő a block[a] 894-el akkor k-t növelem
-            int kutan = 0;
 
-            kelott = RandomFixnumberBefore(rnd, block, n, kelott);
+            int k = 0;
+            int kk = 0;
+            int kkk = 0;
+
+
+            //Feltöltöm a tömböt random számokkal
+            for (int a = 0; a < n; a++)
+            {
+                block[a] = rnd.Next(0, 1000);
+                Console.Write("{0} ", block[a]);
+                if (block[a] != 894)
+                {
+                    k++;
+                }
+                else
+                {
+                    kk = k;
+                }
+
+            }
 
             Console.WriteLine();
             ////Buborék rendezés
@@ -39,51 +128,25 @@ namespace Buborek894
                 }
             }
 
-            //Kiíratás rendezés után
-            kutan = FixRandomNumberAfter(block, n, kutan);
-
-            Console.ReadKey();
-        }
-
-        private static int FixRandomNumberAfter(int[] block, int n, int kutan)
-        {
             for (int c = 0; c < n; c++)
             {
-                //Console.Write("{0} ", block[c]);
-
+                Console.Write("{0} ", block[c]);
                 if (block[c] != 894)
                 {
-                    kutan++;
-                }
-
-            }
-            Console.WriteLine($"{kutan}. helyen áll.");
-            return kutan;
-        }
-
-        private static int RandomFixnumberBefore(Random rnd, int[] block, int n, int kelott)
-        {
-            for (int a = 0; a < n; a++)
-            {
-                block[a] = rnd.Next(0, 1000);
-              //  Console.Write("{0} ", block[a]);
-                if (block[a] != 894)
-                {
-                    kelott++;
+                    k++;
                 }
                 else
                 {
-                    int k = 0;
-                    k = kelott;
-
-                    Console.Write($"{kelott}. helyen áll.");
+                    kkk = k;
                 }
-               
             }
 
-            return kelott;
-        }
+            Console.WriteLine();
+            Console.WriteLine($"Rendezés előtt {kk}.");
+            Console.WriteLine($"Rendezés után {kkk}.");
+            Console.ReadKey();
 
+        }
 
     }
 }
