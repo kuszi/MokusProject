@@ -155,7 +155,7 @@ namespace Buborek894
             int[] block = new int[10];
             int n = block.Length;
 
-            int k = 0;
+            int k = 1;
             int kk = 0;
             int kkk = 0;
 
@@ -167,10 +167,10 @@ namespace Buborek894
 
             //kell az új ciklus
             for (int b = 0; b < n; b++)
-            {
+            {               
                 if (block[b] != 894)
                 {
-                    k++;                  
+                    k++;                    
                 }
                 if (block[b] == 894)
                 {
