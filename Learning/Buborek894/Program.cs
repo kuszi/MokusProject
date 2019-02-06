@@ -149,35 +149,88 @@ namespace Buborek894
             //2.Keresés.Ez egy új ciklus.
             //3.buborék rendezés.
             //4.Keresés.Megint egy új ciklus.
-            
+
+            #region nem jó
+            //var seed = 25;
+            //Random rnd = new Random(seed);
+            //int[] block = new int[10];
+            //int n = block.Length;
+
+            //int k = 1;
+            //int kk = 0;
+            //int kkk = 0;
+
+            ////Fel van töltve
+            //for (int a = 0; a < n; a++)
+            //{
+            //    block[a] = rnd.Next(0, 1000);
+            //}
+
+            ////kell az új ciklus
+            //for (int b = 0; b < n; b++)
+            //{
+            //    if (block[b] != 894)
+            //    {
+            //        k++;
+            //    }
+            //    if (block[b] == 894)
+            //    {
+            //        kk = k;
+            //    }
+            //}
+
+            //////Buborék rendezés
+            //for (int i = n - 1; i > 0; i--)
+            //{
+            //    for (int j = 0; j < i; j++)
+            //    {
+            //        if (block[j] > block[j + 1])
+            //        {
+            //            int b = block[j + 1];
+            //            block[j + 1] = block[j];
+            //            block[j] = b;
+            //        }
+            //    }
+            //}
+
+            //k = 0;
+            //for (int c = 0; c < n; c++)
+            //{
+            //    if (block[c] != 894)
+            //    {
+            //        k++;
+            //    }
+            //    kkk = k;
+            //}
+
+            //Console.WriteLine($"Rendezés előtt {kk}.");
+            //Console.WriteLine($"Rendezés után {kkk}.");
+            //Console.ReadKey();
+            #endregion
+
+
             var seed = 25;
             Random rnd = new Random(seed);
             int[] block = new int[10];
             int n = block.Length;
-
-            int k = 1;
-            int kk = 0;
-            int kkk = 0;
+            int k = 0;
 
             //Fel van töltve
             for (int a = 0; a < n; a++)
             {
-                block[a] = rnd.Next(0, 1000);                
+                block[a] = rnd.Next(0, 1000);
             }
 
             //kell az új ciklus
             for (int b = 0; b < n; b++)
-            {               
-                if (block[b] != 894)
-                {
-                    k++;                    
-                }
+            {
                 if (block[b] == 894)
                 {
-                    kk = k;
-                }
+                    k = block[b];
+                    break;
+                }                
             }
-           
+
             ////Buborék rendezés
             for (int i = n - 1; i > 0; i--)
             {
@@ -197,13 +250,13 @@ namespace Buborek894
             {
                 if (block[c] != 894)
                 {
-                    k++;
-                }
-               kkk = k;
+                    k = block[c];
+                    break;
+                }                
             }
-            
-            Console.WriteLine($"Rendezés előtt {kk}.");
-            Console.WriteLine($"Rendezés után {kkk}.");
+
+            Console.WriteLine($"Rendezés előtt {k}.");
+            Console.WriteLine($"Rendezés után {k}.");
             Console.ReadKey();
 
 
