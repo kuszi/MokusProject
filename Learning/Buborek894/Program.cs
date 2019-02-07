@@ -208,12 +208,15 @@ namespace Buborek894
             //Console.ReadKey();
             #endregion
 
+            //rendezés előtt és után is
+            //Mondd meg, mi a legkissebb és a legnyagobb elem a tömbben
 
             var seed = 25;
             Random rnd = new Random(seed);
             int[] block = new int[10];
             int n = block.Length;
-            int k = 0;
+            int firstPosition = 0;
+            int min, max;
 
             //Fel van töltve
             for (int a = 0; a < n; a++)
@@ -226,10 +229,21 @@ namespace Buborek894
             {
                 if (block[b] == 894)
                 {
-                    k = block[b];
+                    firstPosition = b;
                     break;
-                }                
+                }
             }
+
+            max = block[0]; min = block[0];
+
+            for (int d = 1; d < n; d++)
+            {
+                if (block[d] > max) max = block[d];
+
+                if (block[d] < min) min = block[d];
+                break;
+            }
+            Console.WriteLine($"Rendezés előtt a számok minimuma: {min}, maximuma: {max}");
 
             ////Buborék rendezés
             for (int i = n - 1; i > 0; i--)
@@ -245,18 +259,29 @@ namespace Buborek894
                 }
             }
 
-            k = 0;
+            firstPosition = 0;
             for (int c = 0; c < n; c++)
             {
-                if (block[c] != 894)
+                if (block[c] == 894)
                 {
-                    k = block[c];
+                    firstPosition = c;
                     break;
-                }                
+                }
             }
 
-            Console.WriteLine($"Rendezés előtt {k}.");
-            Console.WriteLine($"Rendezés után {k}.");
+            max = block[0]; min = block[0];
+
+            for (int d = 1; d < n; d++)
+            {
+                if (block[d] > max) max = block[d];
+
+                if (block[d] < min) min = block[d];
+                break;
+            }
+            Console.WriteLine($"Rendezés után a számok minimuma: {min}, maximuma: {max}");
+
+            Console.WriteLine($"Rendezés előtt {firstPosition}.");
+            Console.WriteLine($"Rendezés után {firstPosition}.");
             Console.ReadKey();
 
 
