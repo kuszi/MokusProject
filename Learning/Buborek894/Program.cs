@@ -216,7 +216,8 @@ namespace Buborek894
             int[] block = new int[10];
             int n = block.Length;
             int firstPosition = 0;
-            int min, max;
+            int afterPositon = 0;
+            int firstMin, firstMax, afterMin, afterMax;
 
             //Fel van töltve
             for (int a = 0; a < n; a++)
@@ -233,17 +234,24 @@ namespace Buborek894
                     break;
                 }
             }
+            Console.WriteLine($"Rendezés előtt {firstPosition}.");
 
-            max = block[0]; min = block[0];
+            firstMax = block[0]; firstMin = block[0];
 
             for (int d = 1; d < n; d++)
             {
-                if (block[d] > max) max = block[d];
-
-                if (block[d] < min) min = block[d];
-                break;
+                if (block[d] > firstMax)
+                {
+                    firstMax = block[d];
+                    break;
+                }
+                if (block[d] < firstMin)
+                {
+                    firstMin = block[d];
+                    break;
+                }
             }
-            Console.WriteLine($"Rendezés előtt a számok minimuma: {min}, maximuma: {max}");
+            Console.WriteLine($"Rendezés előtt a számok minimuma: {firstMin}, maximuma: {firstMax}");
 
             ////Buborék rendezés
             for (int i = n - 1; i > 0; i--)
@@ -258,30 +266,35 @@ namespace Buborek894
                     }
                 }
             }
-
-            firstPosition = 0;
+            
             for (int c = 0; c < n; c++)
             {
                 if (block[c] == 894)
                 {
-                    firstPosition = c;
+                    afterPositon = c;
                     break;
                 }
             }
 
-            max = block[0]; min = block[0];
+            Console.WriteLine($"Rendezés után {afterPositon}.");
+
+            afterMax = block[0]; afterMin = block[0];
 
             for (int d = 1; d < n; d++)
             {
-                if (block[d] > max) max = block[d];
-
-                if (block[d] < min) min = block[d];
-                break;
+                if (block[d] > afterMax)
+                {
+                    afterMax = block[d];
+                    break;
+                }
+                if (block[d] < afterMin)
+                {
+                    afterMin = block[d];
+                    break;
+                }
             }
-            Console.WriteLine($"Rendezés után a számok minimuma: {min}, maximuma: {max}");
-
-            Console.WriteLine($"Rendezés előtt {firstPosition}.");
-            Console.WriteLine($"Rendezés után {firstPosition}.");
+            Console.WriteLine($"Rendezés után a számok minimuma: {afterMin}, maximuma: {afterMax}");
+         
             Console.ReadKey();
 
 
