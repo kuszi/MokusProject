@@ -211,6 +211,8 @@ namespace Buborek894
             //rendezés előtt és után is
             //Mondd meg, mi a legkissebb és a legnyagobb elem a tömbben
 
+           // Kérem a tömb elemeinek összegét és átlagát rendezés elött és rendezés után.
+
             var seed = 25;
             Random rnd = new Random(seed);
             int[] block = new int[10];
@@ -218,6 +220,11 @@ namespace Buborek894
             int firstPosition = 0;
             int afterPositon = 0;
             int firstMin, firstMax, afterMin, afterMax;
+            int firstsum = 0;
+            int aftersum = 0;
+            int firstaverage = 0;
+            int afteraverage = 0;
+
 
             //Fel van töltve
             for (int a = 0; a < n; a++)
@@ -250,6 +257,16 @@ namespace Buborek894
                 }
             }
             Console.WriteLine($"Rendezés előtt a számok minimuma: {firstMin}, maximuma: {firstMax}");
+
+            for (int e = 0; e < n; e++)
+            {
+                firstsum += block[e];
+            }
+            Console.WriteLine($"Rendezés előtt a tömb elemeinek összege: {firstsum}");
+
+            firstaverage = firstsum / n;
+
+            Console.WriteLine($"Rendezés után a tömb elemeinek átlaga: {firstaverage}");
 
             ////Buborék rendezés
             for (int i = n - 1; i > 0; i--)
@@ -290,7 +307,17 @@ namespace Buborek894
                 }
             }
             Console.WriteLine($"Rendezés után a számok minimuma: {afterMin}, maximuma: {afterMax}");
-         
+
+            for (int e = 0; e < n; e++)
+            {
+                aftersum += block[e];
+            }
+            Console.WriteLine($"Rendezés előtt a tömb elemeinek összege: {aftersum}");
+
+            afteraverage = aftersum / n;
+
+            Console.WriteLine($"Rendezés után a tömb elemeinek átlaga: {afteraverage}");
+
             Console.ReadKey();
 
 
