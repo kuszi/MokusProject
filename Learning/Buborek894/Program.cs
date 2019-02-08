@@ -242,13 +242,11 @@ namespace Buborek894
             {
                 if (block[d] > firstMax)
                 {
-                    firstMax = block[d];
-                    break;
+                    firstMax = block[d];                   
                 }
                 if (block[d] < firstMin)
                 {
-                    firstMin = block[d];
-                    break;
+                    firstMin = block[d];                 
                 }
             }
             Console.WriteLine($"Rendezés előtt a számok minimuma: {firstMin}, maximuma: {firstMax}");
@@ -284,13 +282,11 @@ namespace Buborek894
             {
                 if (block[d] > afterMax)
                 {
-                    afterMax = block[d];
-                    break;
+                    afterMax = block[d];                    
                 }
                 if (block[d] < afterMin)
                 {
-                    afterMin = block[d];
-                    break;
+                    afterMin = block[d];                    
                 }
             }
             Console.WriteLine($"Rendezés után a számok minimuma: {afterMin}, maximuma: {afterMax}");
