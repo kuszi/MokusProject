@@ -42,112 +42,167 @@ namespace HetvegiLenyoTomb
             //            - ha kissebb, akkor az alsoIndex kapja meg ezt az értéket. alsoIndex = 9-- most ez a helyzet
             //-ha nagyobb, akkor a felsoIndex kapja meg ezt az értéket. felsoIndex = 9
 
-            if (block[iKerekites] == 130)
+            //if (block[iKerekites] == 130)
+            //{
+            //    Console.WriteLine($"Meg van a 130.");
+            //}
+            //else if (block[iKerekites] < 130)
+            //{
+            //    alsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //}
+            //else
+            //{
+            //    felsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //}
+            while (block[alsoIndex] <= block[felsoIndex])
             {
-                Console.WriteLine($"Meg van a 13.");
+                 osszeg = (alsoIndex + felsoIndex);
+                 osszegfele = osszeg / 2;
+                 kerekites = Math.Floor(osszegfele);
+
+                Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+                 iKerekites = (int)kerekites;
+                if (block[iKerekites] == 130)
+                {
+                    Console.WriteLine($"Meg van a 130.");
+                    break;
+                }
+                else if (block[iKerekites] < 130)
+                {
+                    alsoIndex = iKerekites;
+                    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+                }
+                else
+                {
+                    felsoIndex = iKerekites;
+                    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+                }
             }
-            else if (block[iKerekites] < 130)
-            {
-                alsoIndex = iKerekites;
-                Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            }
-            else
-            {
-                felsoIndex = iKerekites;
-                Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            }
+
+
+            //if (alsoIndex == felsoIndex && block[alsoIndex] != 130)
+            //{
+            //    Console.WriteLine($"Vége: nincs találat.");
+            //}
+            //else
+            //{
+            //    if (block[iKerekites] == 130)
+            //    {
+            //        Console.WriteLine($"Meg van a 130.");
+            //    }
+            //    else if (block[iKerekites] < 130)
+            //    {
+            //        alsoIndex = iKerekites;
+            //        Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //    }
+            //    else
+            //    {
+            //        felsoIndex = iKerekites;
+            //        Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //    }
+
+            //     osszeg = (alsoIndex + felsoIndex);
+            //     osszegfele = osszeg / 2;
+            //     kerekites = Math.Floor(osszegfele);
+
+            //    Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //    iKerekites = (int)kerekites;
+            //}
+
 
             //következő kör
-            osszeg = (alsoIndex + felsoIndex);
-            osszegfele = osszeg / 2;
-            kerekites = Math.Floor(osszegfele);
+            //osszeg = (alsoIndex + felsoIndex);
+            //osszegfele = osszeg / 2;
+            //kerekites = Math.Floor(osszegfele);
 
-            Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-            iKerekites = (int)kerekites;
+            //Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //iKerekites = (int)kerekites;
 
-            if (block[iKerekites] == 130)
-            {
-                Console.WriteLine($"Meg van a 130.");
-            }
-            else if (block[iKerekites] < 130)
-            {
-                alsoIndex = iKerekites;
-                Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            }
-            else
-            {
-                felsoIndex = iKerekites;
-                Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            }
+            //if (block[iKerekites] == 130)
+            //{
+            //    Console.WriteLine($"Meg van a 130.");
+            //}
+            //else if (block[iKerekites] < 130)
+            //{
+            //    alsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //}
+            //else
+            //{
+            //    felsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //}
 
-            osszeg = (alsoIndex + felsoIndex);
-            osszegfele = osszeg / 2;
-            kerekites = Math.Floor(osszegfele);
+            //osszeg = (alsoIndex + felsoIndex);
+            //osszegfele = osszeg / 2;
+            //kerekites = Math.Floor(osszegfele);
 
-            Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-            iKerekites = (int)kerekites;
+            //Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //iKerekites = (int)kerekites;
 
-            if (block[iKerekites] == 130)
-            {
-                Console.WriteLine($"Meg van a 13.");
-            }
-            else if (block[iKerekites] < 130)
-            {
-                alsoIndex = iKerekites;
-                Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            }
-            else
-            {
-                felsoIndex = iKerekites;
-                Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            }
+            //if (block[iKerekites] == 130)
+            //{
+            //    Console.WriteLine($"Meg van a 130.");
+            //}
+            //else if (block[iKerekites] < 130)
+            //{
+            //    alsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //}
+            //else
+            //{
+            //    felsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //}
 
-            osszeg = (alsoIndex + felsoIndex);
-            osszegfele = osszeg / 2;
-            kerekites = Math.Floor(osszegfele);
+            //osszeg = (alsoIndex + felsoIndex);
+            //osszegfele = osszeg / 2;
+            //kerekites = Math.Floor(osszegfele);
 
-            Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-            iKerekites = (int)kerekites;
+            //Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //iKerekites = (int)kerekites;
 
-            if (block[iKerekites] == 130)
-            {
-                Console.WriteLine($"Meg van a 13.");
-            }
-            else if (block[iKerekites] < 130)
-            {
-                alsoIndex = iKerekites;
-                Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            }
-            else
-            {
-                felsoIndex = iKerekites;
-                Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            }
+            //if (block[iKerekites] == 130)
+            //{
+            //    Console.WriteLine($"Meg van a 130.");
+            //}
+            //else if (block[iKerekites] < 130)
+            //{
+            //    alsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //}
+            //else
+            //{
+            //    felsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //}
 
-            osszeg = (alsoIndex + felsoIndex);
-            osszegfele = osszeg / 2;
-            kerekites = Math.Floor(osszegfele);
+            //osszeg = (alsoIndex + felsoIndex);
+            //osszegfele = osszeg / 2;
+            //kerekites = Math.Floor(osszegfele);
 
-            Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-            iKerekites = (int)kerekites;
+            //Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //iKerekites = (int)kerekites;
 
-            if (block[iKerekites] == 130)
-            {
-                Console.WriteLine($"Meg van a 13.");
-            }
-            else if (block[iKerekites] < 130)
-            {
-                alsoIndex = iKerekites;
-                Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            }
-            else
-            {
-                felsoIndex = iKerekites;
-                Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            }
+            //if (block[iKerekites] == 130)
+            //{
+            //    Console.WriteLine($"Meg van a 130.");
+            //}
+            //else if (block[iKerekites] < 130)
+            //{
+            //    alsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //}
+            //else
+            //{
+            //    felsoIndex = iKerekites;
+            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //}
 
             //vége
-            if (alsoIndex == felsoIndex && alsoIndex != 130)
+            //if (alsoIndex == felsoIndex && block[alsoIndex] != 130)
             {
                 Console.WriteLine($"Vége: nincs találat.");
 
