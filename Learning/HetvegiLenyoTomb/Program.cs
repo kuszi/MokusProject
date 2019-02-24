@@ -13,8 +13,12 @@ namespace HetvegiLenyoTomb
             int[] block = new int[20];
             int n = block.Length;
             int i = 0;
-            int alsoIndex;
-            int felsoIndex;
+            int alsoIndex = 0;
+            int felsoIndex = n - 1;
+            double osszeg = (alsoIndex + felsoIndex);
+            double osszegfele = osszeg / 2;
+            double kerekites = Math.Floor(osszegfele);
+            int iKerekites = (int)kerekites;
 
             int stepCounter;
 
@@ -24,50 +28,21 @@ namespace HetvegiLenyoTomb
                 Console.Write($"{block[i]}, ");
             }
 
-            alsoIndex = 0;
-            felsoIndex = n - 1;
-            Console.WriteLine($"\n A tömb also indexe: {alsoIndex}.");
-            Console.WriteLine($"A tömb felso indexe: {felsoIndex}.");
-
-            //vedd az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.
-            double osszeg = (alsoIndex + felsoIndex);
-            double osszegfele = osszeg / 2;
-            double kerekites = Math.Floor(osszegfele);
-
-            Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-            int iKerekites = (int)kerekites;
-
-            //        l. if 9 == 13
-            //            - ha egyezik, akkor itt a keresés vége
-            //            - ha kissebb, akkor az alsoIndex kapja meg ezt az értéket. alsoIndex = 9-- most ez a helyzet
-            //-ha nagyobb, akkor a felsoIndex kapja meg ezt az értéket. felsoIndex = 9
-
-            //if (block[iKerekites] == 130)
-            //{
-            //    Console.WriteLine($"Meg van a 130.");
-            //}
-            //else if (block[iKerekites] < 130)
-            //{
-            //    alsoIndex = iKerekites;
-            //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
-            //}
-            //else
-            //{
-            //    felsoIndex = iKerekites;
-            //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
-            //}
-            while (block[alsoIndex] <= block[felsoIndex])
+            do
             {
-                 osszeg = (alsoIndex + felsoIndex);
-                 osszegfele = osszeg / 2;
-                 kerekites = Math.Floor(osszegfele);
+                Console.WriteLine($"\n A tömb also indexe: {alsoIndex}.");
+                Console.WriteLine($"A tömb felso indexe: {felsoIndex}.");
+
+                //vedd az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.
+                osszeg = (alsoIndex + felsoIndex);
+                osszegfele = osszeg / 2;
+                kerekites = Math.Floor(osszegfele);
 
                 Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
-                 iKerekites = (int)kerekites;
+                iKerekites = (int)kerekites;
                 if (block[iKerekites] == 130)
                 {
-                    Console.WriteLine($"Meg van a 130.");
-                    break;
+                    Console.WriteLine($"Meg van a 130.");break;
                 }
                 else if (block[iKerekites] < 130)
                 {
@@ -79,7 +54,49 @@ namespace HetvegiLenyoTomb
                     felsoIndex = iKerekites;
                     Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
                 }
+                //        l. if 9 == 13
+                //            - ha egyezik, akkor itt a keresés vége
+                //            - ha kissebb, akkor az alsoIndex kapja meg ezt az értéket. alsoIndex = 9-- most ez a helyzet
+                //-ha nagyobb, akkor a felsoIndex kapja meg ezt az értéket. felsoIndex = 9
+
+                //if (block[iKerekites] == 130)
+                //{
+                //    Console.WriteLine($"Meg van a 130.");
+                //}
+                //else if (block[iKerekites] < 130)
+                //{
+                //    alsoIndex = iKerekites;
+                //    Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+                //}
+                //else
+                //{
+                //    felsoIndex = iKerekites;
+                //    Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+                //}
             }
+            while (block[alsoIndex] == block[felsoIndex] || block[alsoIndex] != 130);
+            //{
+            //    osszeg = (alsoIndex + felsoIndex);
+            //    osszegfele = osszeg / 2;
+            //    kerekites = Math.Floor(osszegfele);
+
+            //    Console.WriteLine($" Az alsoIndex és felsoIndex összegének a felét és lefelé kerekítsd.{kerekites}");
+            //    iKerekites = (int)kerekites;
+            //    if (block[iKerekites] == 130)
+            //    {
+            //        Console.WriteLine($"Meg van a 130.");
+            //    }
+            //    else if (block[iKerekites] < 130)
+            //    {
+            //        alsoIndex = iKerekites;
+            //        Console.WriteLine($"A tömb alsóindexe elem: {alsoIndex}.");
+            //    }
+            //    else
+            //    {
+            //        felsoIndex = iKerekites;
+            //        Console.WriteLine($"A tömb felsiindexe elem: {felsoIndex}.");
+            //    }
+            //}
 
 
             //if (alsoIndex == felsoIndex && block[alsoIndex] != 130)
@@ -203,10 +220,10 @@ namespace HetvegiLenyoTomb
 
             //vége
             //if (alsoIndex == felsoIndex && block[alsoIndex] != 130)
-            {
-                Console.WriteLine($"Vége: nincs találat.");
+            //{
+            //    Console.WriteLine($"Vége: nincs találat.");
 
-            }
+            //}
 
             Console.ReadKey();
         }
