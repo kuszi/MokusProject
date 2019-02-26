@@ -55,7 +55,7 @@ namespace HetvegiLenyoTomb
                     Console.WriteLine($"A tömb felsoindexe elem: {felsoIndex}.");
                 }                
             }
-            while (alsoIndex != felsoIndex || block[iKerekites] != 130);
+            while (alsoIndex != felsoIndex && block[iKerekites] != 130);
            
             Console.ReadKey();
 
