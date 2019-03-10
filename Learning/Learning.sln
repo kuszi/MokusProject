@@ -29,6 +29,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buborek894", "Buborek894\Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HetvegiLenyoTomb", "HetvegiLenyoTomb\HetvegiLenyoTomb.csproj", "{F49F71E2-6C06-4353-A9A8-74E8B4F97BC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codingame", "codingame", "{A91FD007-EE5B-4BEB-9448-622239F5BDC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unitTest", "unitTest", "{ACE2DF9D-F5AA-4E5F-B6C2-7ED77354F8EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProba1", "UnitTestProba1\UnitTestProba1.csproj", "{E00F6021-E4D4-41D7-8241-C3A914E346B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +89,10 @@ Global
 		{F49F71E2-6C06-4353-A9A8-74E8B4F97BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F49F71E2-6C06-4353-A9A8-74E8B4F97BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F49F71E2-6C06-4353-A9A8-74E8B4F97BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00F6021-E4D4-41D7-8241-C3A914E346B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00F6021-E4D4-41D7-8241-C3A914E346B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00F6021-E4D4-41D7-8241-C3A914E346B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00F6021-E4D4-41D7-8241-C3A914E346B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +106,7 @@ Global
 		{3821F08C-E1F6-4478-A643-E28A1BFDBA97} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 		{D7194D60-811F-49EE-B56D-A66F5745050F} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
 		{F49F71E2-6C06-4353-A9A8-74E8B4F97BC5} = {C5CBA9A0-4E6A-4AAA-A151-92B708EF766D}
+		{E00F6021-E4D4-41D7-8241-C3A914E346B6} = {ACE2DF9D-F5AA-4E5F-B6C2-7ED77354F8EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBDB65E7-F22D-49A3-A40E-8152B4F0B339}
