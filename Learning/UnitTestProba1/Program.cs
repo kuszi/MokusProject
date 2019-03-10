@@ -10,12 +10,12 @@ namespace UnitTestProba1
     {
         static void Main(string[] args)
         {
-            ClassUnderTest newclass = new ClassUnderTest();
+           // ClassUnderTest newclass = new ClassUnderTest();
             //newclass.Add(1, 2);
             //newclass.Kivon(2, 1);
             //newclass.Szor(1, 2);
             //newclass.Oszt(2, 1);
-            TestClass newTestClass = new TestClass();
+            var newTestClass = new TestClass();
             newTestClass.DoTestAdd();
             newTestClass.DoTestKivon();
             newTestClass.DoTestSzor();

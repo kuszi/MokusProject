@@ -13,7 +13,7 @@ namespace UnitTestProba1
             //OK: 3-nak kell lenni a 1+2
 
            var classUnderTest = new ClassUnderTest();
-            var result = classUnderTest.Add(1, 2);
+           var result = classUnderTest.Add(1, 2);
 
             if (result == 3)
                 Console.WriteLine("ok");
