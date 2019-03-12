@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UnitTestProba1
+﻿namespace UnitTestProba1
 {
-   public class ClassUnderTest
+    public class ClassUnderTest
     {
         public int Add(int a, int b)
         {

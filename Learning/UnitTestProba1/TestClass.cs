@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestProba1
 {
-  public  class TestClass
+    public  class TestClass
     {
         public void DoTestAdd()
         {
             //OK: 3-nak kell lenni a 1+2
 
            var classUnderTest = new ClassUnderTest();
-           var result = classUnderTest.Add(1, 2);
+            var result = classUnderTest.Add(1, 2);
 
             if (result == 3)
                 Console.WriteLine("ok");

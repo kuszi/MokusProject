@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THOR", "THOR\THOR.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGoal", "TheGoal\TheGoal.csproj", "{D0902E48-9D8B-45DB-869F-5599BEC24ED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperatures", "Temperatures\Temperatures.csproj", "{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{D0902E48-9D8B-45DB-869F-5599BEC24ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0902E48-9D8B-45DB-869F-5599BEC24ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0902E48-9D8B-45DB-869F-5599BEC24ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +127,7 @@ Global
 		{E00F6021-E4D4-41D7-8241-C3A914E346B6} = {ACE2DF9D-F5AA-4E5F-B6C2-7ED77354F8EF}
 		{B0AFAA5B-AB8B-4581-BE62-F05883DE2463} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
 		{D0902E48-9D8B-45DB-869F-5599BEC24ED9} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
+		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBDB65E7-F22D-49A3-A40E-8152B4F0B339}
