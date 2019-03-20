@@ -24,7 +24,7 @@ namespace Temperatures
             //Console.WriteLine("result");
             #endregion
           
-            int[] inputs = new int[11] { 1, 6, 2, 3, -5, 4, -6, -2, -1, -4, 0 };
+            int[] inputs = { 1, 6, 2, 3, -5, 4, -6, -2, -1, -4, 0 };
             int aMAxValue = 6;
 
             if (inputs.Length > 0)
@@ -33,11 +33,11 @@ namespace Temperatures
                 {
                     if (Math.Abs(aMAxValue) > Math.Abs(inputs[i]))
                     {
-                        aMAxValue = i;
+                        aMAxValue = inputs[i];
                     }
-                    else if (Math.Abs(aMAxValue) == Math.Abs(inputs[i]) && i >= aMAxValue)
+                    else if (Math.Abs(aMAxValue) == Math.Abs(inputs[i]) && inputs[i] >= aMAxValue)
                     {
-                        aMAxValue = i;
+                        aMAxValue = inputs[i];
                     }
                 }
             }
