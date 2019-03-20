@@ -23,36 +23,35 @@ namespace Temperatures
 
             //Console.WriteLine("result");
             #endregion
-
-            //int n = int.Parse(Console.ReadLine()); // the number of temperatures to analyse
-            int[] inputs = { 1, 6, 2, 3, -5, 4, -6, -2, -1, -4, 0 };//Console.ReadLine().Split(' ');
+          
+            int[] inputs = new int[11] { 1, 6, 2, 3, -5, 4, -6, -2, -1, -4, 0 };
             int aMAxValue = 6;
 
-
-            for (int i = 0; i < inputs.Length; i++)
+            if (inputs.Length > 0)
             {
-                if (aMAxValue > Math.Abs(inputs[i]))
+                for (int i = 0; i < inputs.Length; i++)
                 {
-                    aMAxValue = Math.Abs(inputs[i]);
+                    if (Math.Abs(aMAxValue) > Math.Abs(inputs[i]))
+                    {
+                        aMAxValue = i;
+                    }
+                    else if (Math.Abs(aMAxValue) == Math.Abs(inputs[i]) && i >= aMAxValue)
+                    {
+                        aMAxValue = i;
+                    }
                 }
-                else if (aMAxValue == Math.Abs(inputs[i]) && inputs[i] > aMAxValue)
-                {
-                    aMAxValue = inputs[i];
-                }
-                else if (i == 0)
-                {
-                    aMAxValue = inputs[i];
-                }
-                //int t = int.Parse(inputs[i]); // a temperature expressed as an integer ranging from -273 to 5526
             }
-
-            // Write an action using Console.WriteLine()
-            // To debug: Console.Error.WriteLine("Debug messages...");
+            else
+            {
+                aMAxValue = 0;
+            }
 
             Console.WriteLine("{0}", aMAxValue);
 
 
             Console.ReadKey();
+            Console.ReadLine();
+
             #region jatekban ig
             //int n = int.Parse(Console.ReadLine()); // the number of temperatures to analyse
             //string[] inputs = Console.ReadLine().Split(' ');
