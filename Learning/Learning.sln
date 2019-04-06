@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Welcome", "Welcome\Welcome.csproj", "{5BA0A72B-38CB-43ED-8BE6-248F62027015}"
 EndProject
@@ -40,6 +40,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGoal", "TheGoal\TheGoal.csproj", "{D0902E48-9D8B-45DB-869F-5599BEC24ED9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperatures", "Temperatures\Temperatures.csproj", "{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SyncAsync", "SyncAsync", "{BFF721E5-76C0-411F-9916-BECDC10BF49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncAsync_01", "SyncAsync_01\SyncAsync_01.csproj", "{FE0F804C-C496-4E8D-AA55-6575A0F60A4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,10 @@ Global
 		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0F804C-C496-4E8D-AA55-6575A0F60A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0F804C-C496-4E8D-AA55-6575A0F60A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0F804C-C496-4E8D-AA55-6575A0F60A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0F804C-C496-4E8D-AA55-6575A0F60A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +136,7 @@ Global
 		{B0AFAA5B-AB8B-4581-BE62-F05883DE2463} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
 		{D0902E48-9D8B-45DB-869F-5599BEC24ED9} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
 		{2E73D1E2-036B-4CB6-858D-FAA2B45358BF} = {A91FD007-EE5B-4BEB-9448-622239F5BDC2}
+		{FE0F804C-C496-4E8D-AA55-6575A0F60A4F} = {BFF721E5-76C0-411F-9916-BECDC10BF49A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBDB65E7-F22D-49A3-A40E-8152B4F0B339}
