@@ -27,23 +27,119 @@ namespace SyncAsync_01
         // Ha a 4. ponttal is kész vagy, láthatod, a "#" karakterek mindig az összes "*" kirakása után van.
         // Ez logikus, hiszen ez a szinkron futás (amikor az egyik művelet a másik után hajtódik végre)
         // Ezzel szemben a "-", "T" és "+" jelek bárhol megjelenhetnek, mert külön szálon (külön taskban) futnak. Ez az asyncron futás
-        static void Main(string[] args)
+
+        static object lakatKulcs = new object();//referencia típus kell
+
+        static void Negativ()
         {
-            
-            Task task = Task.Factory.StartNew(() =>
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    Console.Write("-");
-                    Thread.Sleep(1);
-                }
-            });
 
             for (int i = 0; i < 100; i++)
             {
-                Console.Write("*");
+                Console.Write("-");
                 Thread.Sleep(1);
             }
+
+        }
+
+        static void Tfgv()
+        {
+            for (int i = 0; 1 < 100; i++)
+            {
+                Console.Write("T");
+                Thread.Sleep(2);
+            }
+        }
+
+
+        static void PLuszfgv()
+        {
+            for (int i = 0; 1 < 100; i++)
+            {
+                Console.Write("+");
+                Thread.Sleep(2);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+
+            //Task task = Task.Factory.StartNew(() =>
+            //{  for (int i = 0; i < 100; i++)
+            //    {
+            //        Console.Write("-");
+            //        Thread.Sleep(1);
+            //    }
+            //});        
+
+
+            //Task taskT = Task.Factory.StartNew(() =>
+            //{
+            //    for (int i = 0; 1 < 100; i++)
+            //    {
+            //        Console.Write("T");
+            //        Thread.Sleep(2);
+            //    }
+            //});
+
+            //Task taskPLusz = Task.Factory.StartNew(() =>
+            //{
+            //    for (int i = 0; 1 < 100; i++)
+            //    {
+            //        Console.Write("+");
+            //        Thread.Sleep(2);
+            //    }
+            //});
+
+
+
+
+            int length = 3;
+            Task[] tasks = new Task[length];
+            for (int i = 0; i < length; i++)
+            {
+                if (i == 1)
+                {
+                    tasks[i] = new Task(() => Negativ());
+                }
+                else if (i == 2)
+                {
+                    tasks[i] = new Task(() => Tfgv());
+                }
+                else if (i == 3)
+                {
+                    tasks[i] = new Task(() => PLuszfgv());
+                }
+            }
+            for (int i = 0; i < length; i++)
+            {
+                tasks[i].Start();
+            }
+
+
+
+            ///Fő szál
+            for (int i = 0; i < 100; i++)
+            {
+                //if (i == 100 || i > 100)
+                //{
+                //    for (int j = 0; j < 100; j++)
+                //    {
+                //        Console.Write("#");
+                //        Thread.Sleep(1);
+                //    }
+                //}
+
+                //else
+                //{
+                Console.Write("*");
+                Thread.Sleep(1);
+                //}
+            }
+
+
+            Task.WaitAll(tasks);
+            // Console.WriteLine();
+            // Console.ReadLine();
 
 
             Console.WriteLine("Done. Press Enter");
