@@ -76,6 +76,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVMBase\NotifyBase.cs" />
+    <Compile Include="MVVMBase\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
