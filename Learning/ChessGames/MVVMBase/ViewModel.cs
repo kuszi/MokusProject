@@ -29,14 +29,15 @@ namespace ChessGames.MVVMBase
             //32 kell, később egysezrűsítunk while ciklussal
             Babuk = new ObservableCollection<IBabu>();
             //fehér
-            Babuk.Add(new Gyalogos("Gyalog",true,Gyalogos.BabuMozgas, "a2", Gyalogos.BabuUtes));
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
+            Babuk.Add(new Gyalogos("Gyalog",true, "a2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "b2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "c2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "d2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "e2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "f2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "g2"));
+            Babuk.Add(new Gyalogos("Gyalog",true, "h2"));
+
             //fekete
             Babuk.Add(new Gyalogos());
             Babuk.Add(new Gyalogos());

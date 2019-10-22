@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChessGames.MVVMBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,19 +7,13 @@ using System.Threading.Tasks;
 
 namespace ChessGames
 {
-    class Gyalogos : IBabu
+    class Gyalogos : NotifyBase, IBabu
     {
+        private string _babuNev;
         public string BabuNev
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { return _babuNev; }
+            set { _babuNev = value; OnPropertyChanged(); }
         }
 
         public string BabuPozicio
@@ -55,6 +50,13 @@ namespace ChessGames
         public void BabuUtes()
         {
             throw new NotImplementedException();
+        }
+
+        public Gyalogos(string babuNev, bool babuSzin, string babuPozicio)
+        {
+            BabuNev = babuNev;
+            BabuSzine = babuSzin;
+            BabuPozicio = babuPozicio;
         }
     }
 }
