@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:ChessGames"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <ListBox ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"/>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"/>
+        <TextBlock Grid.Column="1" Text="{Binding MelyikBabu}"/>
     </Grid>
 </Window>
