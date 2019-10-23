@@ -51,5 +51,12 @@ namespace ChessGames
         {
             throw new NotImplementedException();
         }
+
+        public Bastya(string babuNev, bool babuSzin, string babuPozício)
+        {
+            BabuNev = babuNev;
+            BabuSzine = babuSzin;
+            BabuPozicio = babuPozício;
+        }
     }
 }

@@ -39,32 +39,32 @@ namespace ChessGames.MVVMBase
             Babuk.Add(new Gyalogos("Gyalog",true, "h2"));
 
             //fekete
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
-            Babuk.Add(new Gyalogos());
+            Babuk.Add(new Gyalogos("Gyalog", false, "a7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "b7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "c7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "d7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "e7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "f7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "g7"));
+            Babuk.Add(new Gyalogos("Gyalog", false, "h7"));
             //fehér
-            Babuk.Add(new Bastya());
-            Babuk.Add(new Bastya());
-            Babuk.Add(new Huszar());
-            Babuk.Add(new Huszar());
-            Babuk.Add(new Futo());
-            Babuk.Add(new Futo());
-            Babuk.Add(new Vezer());
-            Babuk.Add(new Kiraly());
+            Babuk.Add(new Bastya("Bástya", true, "a1"));
+            Babuk.Add(new Bastya("Bástya", true, "h1"));
+            Babuk.Add(new Huszar("Huszár", true, "b1"));
+            Babuk.Add(new Huszar("Huszár", true, "g1"));
+            Babuk.Add(new Futo("Futo", true, "c1"));
+            Babuk.Add(new Futo("Futo", true, "f1"));
+            Babuk.Add(new Vezer("Királynő", true, "d1"));
+            Babuk.Add(new Kiraly("Király",true,"e1"));
             //fekete
-            Babuk.Add(new Bastya());
-            Babuk.Add(new Bastya());
-            Babuk.Add(new Huszar());
-            Babuk.Add(new Huszar());
-            Babuk.Add(new Futo());
-            Babuk.Add(new Futo());
-            Babuk.Add(new Vezer());
-            Babuk.Add(new Kiraly());
+            Babuk.Add(new Bastya("Bástya", false, "a8"));
+            Babuk.Add(new Bastya("Bástya", false, "h8"));
+            Babuk.Add(new Huszar("Huszár", false, "b8"));
+            Babuk.Add(new Huszar("Huszár", false, "g8"));
+            Babuk.Add(new Futo("Futo", false, "c8"));
+            Babuk.Add(new Futo("Futo", false, "f8"));
+            Babuk.Add(new Vezer("Királynő", false, "d8"));
+            Babuk.Add(new Kiraly("Király", false, "e8"));
 
 
 

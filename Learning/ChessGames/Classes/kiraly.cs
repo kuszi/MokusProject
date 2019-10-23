@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChessGames.MVVMBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace ChessGames
 {
-    class Kiraly : IBabu
+    public class Kiraly : NotifyBase, IBabu
     {
+        private string _babuNev;
         public string BabuNev
         {
             get
             {
-                throw new NotImplementedException();
+                return _babuNev;
             }
 
             set
             {
-                throw new NotImplementedException();
+                _babuNev = value; OnPropertyChanged();
             }
         }
 
@@ -56,5 +58,11 @@ namespace ChessGames
         {
             throw new NotImplementedException();
         }
-    }
+        public Kiraly(string babuNev, bool babuSzin, string babuPozicio)
+        {
+            BabuNev = babuNev;
+            BabuSzine = babuSzin;
+            BabuPozicio = babuPozicio;
+        }
+}
 }
