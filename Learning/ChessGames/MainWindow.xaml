@@ -12,6 +12,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ListBox Grid.Column="0" ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"/>
-        <TextBlock Grid.Column="1" Text="{Binding MelyikBabu}"/>
+        <TextBlock Grid.Column="1" Text="{Binding AktualisBabu}"/>
     </Grid>
 </Window>

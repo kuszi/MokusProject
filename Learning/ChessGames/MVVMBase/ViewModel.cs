@@ -9,12 +9,19 @@ namespace ChessGames.MVVMBase
 {
     class ViewModel : NotifyBase
     {
+        private string _aktualisBabu;
+        public string AktualisBabu { get { return _aktualisBabu; } set { _aktualisBabu = value; OnPropertyChanged(); } }
 
         private string _melyikBabu;
         public string MelyikBabu { get { return _melyikBabu; } set { _melyikBabu = value; OnPropertyChanged(); } }
+
+        private string _milyenBabu;
+        public string MilyenBabu { get { return _milyenBabu; } set { _milyenBabu = value; OnPropertyChanged(); } }
+
+
         #region Collection
         //32 db bábu kell
-        //kell converter ami "átváltja" a atring pozíciót
+        //kell converter ami "átváltja" a string pozíciót
         private ObservableCollection<IBabu> _babuk;
         public ObservableCollection<IBabu> Babuk
         {
@@ -37,33 +44,89 @@ namespace ChessGames.MVVMBase
                 var gyalog = SelectedBabuk as Gyalogos;
                 if (gyalog != null)
                 {
-                    MelyikBabu = "gyalogos";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "gyalogos";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "gyalogos";
+                    }
                 }
                 var bastya = SelectedBabuk as Bastya;
                 if (bastya != null)
                 {
-                    MelyikBabu = "bastya";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "bástya";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "bástya";
+                    }
                 }
                 var futo = SelectedBabuk as Futo;
                 if (futo != null)
                 {
-                    MelyikBabu = "futo";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "futó";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "futó";
+                    }
                 }
                 var huszar = SelectedBabuk as Huszar;
                 if (huszar != null)
                 {
-                    MelyikBabu = "huszár";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "huszár";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "huszár";
+                    }
                 }
                 var vezer = SelectedBabuk as Vezer;
                 if (vezer != null)
                 {
-                    MelyikBabu = "kiralynő";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "kiralynő";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "kiralynő";
+                    }
                 }
                 var kiraly = SelectedBabuk as Kiraly;
                 if (kiraly != null)
                 {
-                    MelyikBabu = "király";
+                    if (SelectedBabuk.BabuSzine == true)
+                    {
+                        MilyenBabu = "fehér";
+                        MelyikBabu = "király";
+                    }
+                    else
+                    {
+                        MilyenBabu = "fekete";
+                        MelyikBabu = "király";
+                    }
                 }
+
+                AktualisBabu = $"{MilyenBabu} {MelyikBabu}";
             }
         }
         #endregion
