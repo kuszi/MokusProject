@@ -11,20 +11,20 @@ namespace THOR
         static void Main(string[] args)
         {
 
-            Térkép, amely 40 széles és 18 magas.
-A program elindítása után: 
-fény koordinátái: lightX és lightY
-Thor: initialTX és initialTY
-Meg kell adnia azt az irányt, hogy Thor merre induljon el.
+            //            Térkép, amely 40 széles és 18 magas.
+            //A program elindítása után: 
+            //fény koordinátái: lightX és lightY
+            //Thor: initialTX és initialTY
+            //Meg kell adnia azt az irányt, hogy Thor merre induljon el.
 
- string[] inputs = Console.ReadLine().Split(' '); -string tömb
- int lightX = int.Parse(inputs[0]); // X pozíció
+            string[] inputs = Console.ReadLine().Split(' '); //-string tömb
+            int lightX = int.Parse(inputs[0]); // X pozíció
             int lightY = int.Parse(inputs[1]); //Y pozíció
             int initialTX = int.Parse(inputs[2]); // Thor X pozíció 
             int initialTY = int.Parse(inputs[3]); // Thor Y pozíció
 
-            while (true) -addig csinálaja amíg igaz
-        {
+            while (true) //-addig csinálaja amíg igaz
+            {
                 int remainingTurns = int.Parse(Console.ReadLine()); // maga a mozgás
                 string s = ""; // s változó
 
@@ -62,4 +62,6 @@ Meg kell adnia azt az irányt, hogy Thor merre induljon el.
 
             }
         }
+    }
 }
+

@@ -11,14 +11,14 @@ namespace TheGoal
         static void Main(string[] args)
         {
             //https://www.codingame.com/ide/puzzle/onboarding
-            if (dist1 < dist2)
-            {
-                Console.WriteLine(enemy1);
-            }
-            else
-            {
-                Console.WriteLine(enemy2);
-            }
+            //if (dist1 < dist2)
+            //{
+            //    Console.WriteLine(enemy1);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(enemy2);
+            //}
         }
     }
 }

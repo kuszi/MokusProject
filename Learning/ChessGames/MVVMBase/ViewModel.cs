@@ -29,7 +29,7 @@ namespace ChessGames.MVVMBase
             //32 kell, később egysezrűsítunk while ciklussal
             Babuk = new ObservableCollection<IBabu>();
             //fehér
-            Babuk.Add(new Gyalogos("Gyalog",true,Gyalogos.BabuMozgas, "a2", Gyalogos.BabuUtes));
+           // Babuk.Add(new Gyalogos("Gyalog",true,Gyalogos.BabuMozgas, "a2", Gyalogos.BabuUtes));
             Babuk.Add(new Gyalogos());
             Babuk.Add(new Gyalogos());
             Babuk.Add(new Gyalogos());
