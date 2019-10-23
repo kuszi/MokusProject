@@ -22,6 +22,11 @@ namespace ChessGames.MVVMBase
                 OnPropertyChanged();
             }
         }
+
+        private IBabu _selectedBabuk;
+        public IBabu SelectedBabuk { get { return _selectedBabuk; } set { _selectedBabuk = value; OnPropertyChanged(); } }
+
+
         #endregion
 
         public ViewModel()
@@ -66,7 +71,7 @@ namespace ChessGames.MVVMBase
             Babuk.Add(new Vezer("Királynő", false, "d8"));
             Babuk.Add(new Kiraly("Király", false, "e8"));
 
-
+            SelectedBabuk=Babuk[0];
 
 
         }

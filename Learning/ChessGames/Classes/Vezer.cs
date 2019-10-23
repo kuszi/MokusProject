@@ -23,29 +23,31 @@ namespace ChessGames
             }
         }
 
+        private string _babuPozicio;
         public string BabuPozicio
         {
             get
             {
-                throw new NotImplementedException();
+                return _babuPozicio;
             }
 
             set
             {
-                throw new NotImplementedException();
+                _babuPozicio = value; OnPropertyChanged();
             }
         }
-
+                               
+        private bool _babuSzine;
         public bool BabuSzine
         {
             get
             {
-                throw new NotImplementedException();
+                return _babuSzine;
             }
 
             set
             {
-                throw new NotImplementedException();
+                _babuSzine = value; OnPropertyChanged();
             }
         }
 

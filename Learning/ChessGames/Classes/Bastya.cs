@@ -16,30 +16,18 @@ namespace ChessGames
             set { _babuNev = value; OnPropertyChanged(); }
         }
 
+        private string _babuPozicio;
         public string BabuPozicio
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { return _babuPozicio; }
+            set { _babuPozicio = value; OnPropertyChanged(); }
         }
 
+        private bool _babuSzine;
         public bool BabuSzine
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { return _babuSzine; }
+            set { _babuSzine = value; OnPropertyChanged(); }
         }
 
         public void BabuMozgas()

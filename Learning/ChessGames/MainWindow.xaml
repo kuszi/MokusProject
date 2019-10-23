@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <ListBox ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"/>
     </Grid>
 </Window>
