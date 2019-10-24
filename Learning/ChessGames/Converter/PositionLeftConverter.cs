@@ -8,8 +8,7 @@ using System.Windows.Data;
 
 namespace ChessGames.Converter
 {
-    public class PositionLeftConverter : IValueConverter            //betű
-
+    public class PositionLeftConverter : IValueConverter            //betű        
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
