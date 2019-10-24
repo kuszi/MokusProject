@@ -9,15 +9,17 @@ namespace ChessGames.MVVMBase
 {
     class ViewModel : NotifyBase
     {
-        private string _aktualisBabu;
+        private string _aktualisBabu;                                                      //amit kikötök a ui-ra
         public string AktualisBabu { get { return _aktualisBabu; } set { _aktualisBabu = value; OnPropertyChanged(); } }
 
-        private string _melyikBabu;
+        private string _melyikBabu;                                                                                    //típusa
         public string MelyikBabu { get { return _melyikBabu; } set { _melyikBabu = value; OnPropertyChanged(); } }
 
-        private string _milyenBabu;
+        private string _milyenBabu;                                                                                              //színe
         public string MilyenBabu { get { return _milyenBabu; } set { _milyenBabu = value; OnPropertyChanged(); } }
 
+        private string _holaBabu;                                                                                              //pozíció
+        public string HolaBabu { get { return _holaBabu; } set { _holaBabu = value; OnPropertyChanged(); } }
 
         #region Collection
         //32 db bábu kell
@@ -48,11 +50,13 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "gyalogos";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "gyalogos";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
                 var bastya = SelectedBabuk as Bastya;
@@ -62,11 +66,13 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "bástya";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "bástya";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
                 var futo = SelectedBabuk as Futo;
@@ -76,11 +82,13 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "futó";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "futó";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
                 var huszar = SelectedBabuk as Huszar;
@@ -90,11 +98,13 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "huszár";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "huszár";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
                 var vezer = SelectedBabuk as Vezer;
@@ -104,11 +114,13 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "kiralynő";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "kiralynő";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
                 var kiraly = SelectedBabuk as Kiraly;
@@ -118,15 +130,17 @@ namespace ChessGames.MVVMBase
                     {
                         MilyenBabu = "fehér";
                         MelyikBabu = "király";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                     else
                     {
                         MilyenBabu = "fekete";
                         MelyikBabu = "király";
+                        HolaBabu = SelectedBabuk.BabuPozicio;
                     }
                 }
 
-                AktualisBabu = $"{MilyenBabu} {MelyikBabu}";
+                AktualisBabu = $"{MilyenBabu} {MelyikBabu} {HolaBabu}";
             }
         }
         #endregion
