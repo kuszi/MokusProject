@@ -4,8 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChessGames"
+        xmlns:Converters="clr-namespace:ChessGames.Converter"
         mc:Ignorable="d"
         Title="MainWindow" Height="525" Width="1050">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Converters:PositionTopConverter x:Key="PositionTopConverter"/>
+            <Converters:PositionLeftConverter x:Key="PositionLeftConverter"/>
+            <DataTemplate x:Key="PouocioKiiroTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}"/>
+                    <TextBox Text=","/>
+                    <TextBox Text="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}"/>
+                </StackPanel>                
+            </DataTemplate>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -15,7 +31,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"/>
+        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}"  ItemTemplate="{StaticResource PouocioKiiroTemplate}"/>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding AktualisBabu}"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="2" Grid.Row="0" Tag="Tabla">
@@ -40,7 +56,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
         </Grid>
-        
-        
+
+
     </Grid>
 </Window>

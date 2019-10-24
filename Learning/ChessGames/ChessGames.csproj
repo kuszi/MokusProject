@@ -69,7 +69,8 @@
     <Compile Include="Classes\Huszar.cs" />
     <Compile Include="Classes\Kiraly.cs" />
     <Compile Include="Classes\Vezer.cs" />
-    <Compile Include="Converter\PositionConverter.cs" />
+    <Compile Include="Converter\PositionLeftConverter.cs" />
+    <Compile Include="Converter\PositionTopConverter.cs" />
     <Compile Include="Interfaces\IBabu.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
