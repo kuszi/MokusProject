@@ -11,6 +11,7 @@
         <ResourceDictionary>
             <Converters:PositionTopConverter x:Key="PositionTopConverter"/>
             <Converters:PositionLeftConverter x:Key="PositionLeftConverter"/>
+            <Converters:BabuColorConverter x:Key="BabuColorConverter"/>
 
             <DataTemplate x:Key="PouocioKiiroTemplate">
                 <StackPanel Orientation="Horizontal">
@@ -25,7 +26,7 @@
                     <Grid Width="100" Height="100"
                               Canvas.Left="{Binding BabuPozicio, Converter={StaticResource PositionLeftConverter}}"
                               Canvas.Top="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}">
-                        <TextBlock Text="{Binding BabuNev}"                                
+                        <TextBlock Text="{Binding BabuNev}" Background="Gray" Foreground="{Binding BabuSzine, Converter={StaticResource BabuColorConverter}}"                        
                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </Canvas>
