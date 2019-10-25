@@ -40,7 +40,7 @@ namespace ChessGames.Converter
                         retVal = 600;
                         break;
                     case 'h':
-                        retVal = 800;
+                        retVal = 700;
                         break;      
                 }
                 return retVal;     

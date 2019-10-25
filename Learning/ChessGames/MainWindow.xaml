@@ -11,20 +11,23 @@
         <ResourceDictionary>
             <Converters:PositionTopConverter x:Key="PositionTopConverter"/>
             <Converters:PositionLeftConverter x:Key="PositionLeftConverter"/>
-            
+
             <DataTemplate x:Key="PouocioKiiroTemplate">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{Binding BabuPozicio, Converter={StaticResource PositionLeftConverter}}"/>
                     <TextBlock Text=","/>
                     <TextBlock Text="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}"/>
-                </StackPanel>                
+                </StackPanel>
             </DataTemplate>
 
             <DataTemplate x:Key="MokusPozicio">
                 <Canvas>
-                    <TextBlock Text="Mokus"
-                                   Canvas.Left="500"
-                                   Canvas.Top="300"/>
+                    <Grid Width="100" Height="100"
+                              Canvas.Left="{Binding BabuPozicio, Converter={StaticResource PositionLeftConverter}}"
+                              Canvas.Top="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}">
+                        <TextBlock Text="{Binding BabuNev}"                                
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
                 </Canvas>
             </DataTemplate>
         </ResourceDictionary>
@@ -32,7 +35,7 @@
     </Window.Resources>
 
     <Grid Margin="10">
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -41,9 +44,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Babuk}" SelectedItem="{Binding SelectedBabuk}" ItemTemplate="{StaticResource PouocioKiiroTemplate}"/>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding AktualisBabu}"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding AktualisBabu}"/>-->
 
-        <Grid Grid.Column="1" Grid.RowSpan="2" Grid.Row="0" Tag="Tabla">
+        <!--<Grid Grid.Column="1" Grid.RowSpan="2" Grid.Row="0" Tag="Tabla">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -64,13 +67,33 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-        </Grid>
+        </Grid>-->
 
         <!-- Pozició kiirás-->
-        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <ItemsControl ItemsSource="{Binding Babuk}" 
                           ItemTemplate="{StaticResource MokusPozicio}"/>
+
+            <Line X1="0" X2="800" Stroke="Black"/>
+            <Line X1="0" Y1="-100" X2="800" Y2="-100" Stroke="Black"/>
+            <Line X1="0" Y1="-200" X2="800" Y2="-200" Stroke="Black"/>
+            <Line X1="0" Y1="-300" X2="800" Y2="-300" Stroke="Black"/>
+            <Line X1="0" Y1="-400" X2="800" Y2="-400" Stroke="Black"/>
+            <Line X1="0" Y1="-500" X2="800" Y2="-500" Stroke="Black"/>
+            <Line X1="0" Y1="-600" X2="800" Y2="-600" Stroke="Black"/>
+            <Line X1="0" Y1="-700" X2="800" Y2="-700" Stroke="Black"/>
+            <Line X1="0" Y1="-800" X2="800" Y2="-800" Stroke="Black"/>
+            <Line Y1="0" Y2="-800" Stroke="Black"/>
+            <Line X1="100" Y1="0" X2="100" Y2="-800" Stroke="Black"/>
+            <Line X1="200" Y1="0" X2="200" Y2="-800" Stroke="Black"/>
+            <Line X1="300" Y1="0" X2="300" Y2="-800" Stroke="Black"/>
+            <Line X1="400" Y1="0" X2="400" Y2="-800" Stroke="Black"/>
+            <Line X1="500" Y1="0" X2="500" Y2="-800" Stroke="Black"/>
+            <Line X1="600" Y1="0" X2="600" Y2="-800" Stroke="Black"/>
+            <Line X1="700" Y1="0" X2="700" Y2="-800" Stroke="Black"/>
+            <Line X1="800" Y1="0" X2="800" Y2="-800" Stroke="Black"/>
+                                                              
         </Canvas>
-        
+
     </Grid>
 </Window>
