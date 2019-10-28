@@ -72,6 +72,45 @@
 
         <!-- Pozició kiirás-->
         <Canvas HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="0" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="100" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="200" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="300" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="400" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="500" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="600" />
+
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="700" />
             <ItemsControl ItemsSource="{Binding Babuk}" 
                           ItemTemplate="{StaticResource MokusPozicio}"/>
 
@@ -93,7 +132,32 @@
             <Line X1="600" Y1="0" X2="600" Y2="-800" Stroke="Black"/>
             <Line X1="700" Y1="0" X2="700" Y2="-800" Stroke="Black"/>
             <Line X1="800" Y1="0" X2="800" Y2="-800" Stroke="Black"/>
-                                                              
+
+           
+
+        </Canvas>
+
+        <Canvas Width="120" Height="200" >
+
+            <!-- Draws a 100 by 50 rectangle with a solid blue fill. -->
+            <Rectangle
+    Width="100"
+    Height="50"
+    Fill="Blue"
+    Canvas.Left="10"
+    Canvas.Top="25" />
+
+            <!-- Draws a 100 by 50 rectangle with a solid blue fill,
+       a black outline, and rounded corners. -->
+            <Rectangle
+    Width="100"
+    Height="50"
+    Fill="Blue"
+    Stroke="Black" StrokeThickness="4"
+    RadiusX="20" RadiusY="20"
+    Canvas.Left="10"
+    Canvas.Top="100"/>
+
         </Canvas>
 
     </Grid>
