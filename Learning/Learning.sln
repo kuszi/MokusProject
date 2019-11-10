@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Welcome", "Welcome\Welcome.csproj", "{5BA0A72B-38CB-43ED-8BE6-248F62027015}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessGames", "ChessGames\ChessGames.csproj", "{8BDCE810-DAF1-4E5D-B390-0BB60CDB2311}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chess", "Chess", "{160C6747-553A-497B-9D6A-123C572ADF39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSystem", "LogSystem\LogSystem.csproj", "{D0EFD489-4C3B-49FD-93D9-0B89C0C17391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{8BDCE810-DAF1-4E5D-B390-0BB60CDB2311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BDCE810-DAF1-4E5D-B390-0BB60CDB2311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BDCE810-DAF1-4E5D-B390-0BB60CDB2311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EFD489-4C3B-49FD-93D9-0B89C0C17391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EFD489-4C3B-49FD-93D9-0B89C0C17391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EFD489-4C3B-49FD-93D9-0B89C0C17391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EFD489-4C3B-49FD-93D9-0B89C0C17391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
