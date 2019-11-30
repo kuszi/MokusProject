@@ -12,6 +12,7 @@
             <Converters:PositionTopConverter x:Key="PositionTopConverter"/>
             <Converters:PositionLeftConverter x:Key="PositionLeftConverter"/>
             <Converters:BabuColorConverter x:Key="BabuColorConverter"/>
+            <Converters:BabuImageMultiConverter x:Key="BabuImageMultiConverter"/>
 
             <DataTemplate x:Key="PouocioKiiroTemplate">
                 <StackPanel Orientation="Horizontal">
@@ -26,8 +27,16 @@
                     <Grid Width="100" Height="100"
                               Canvas.Left="{Binding BabuPozicio, Converter={StaticResource PositionLeftConverter}}"
                               Canvas.Top="{Binding BabuPozicio, Converter={StaticResource PositionTopConverter}}">
-                        <TextBlock Text="{Binding BabuNev}" Background="Gray" Foreground="{Binding BabuSzine, Converter={StaticResource BabuColorConverter}}"                        
-                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Width="90" Height="90" HorizontalAlignment="Center" VerticalAlignment="Center"> 
+                            <Image.Source>
+                                <MultiBinding Converter="{StaticResource BabuImageMultiConverter}">
+                                    <Binding Path="BabuNev"/>
+                                    <Binding Path="BabuSzine"/>
+                                </MultiBinding>
+                            </Image.Source>
+                        </Image>
+                        <!--<TextBlock Text="{Binding BabuNev}" Background="Gray" Foreground="{Binding BabuSzine, Converter={StaticResource BabuColorConverter}}"                        
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
                     </Grid>
                 </Canvas>
             </DataTemplate>
@@ -72,45 +81,45 @@
 
         <!-- Pozició kiirás-->
         <Canvas HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="0" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="0" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="0" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="0" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="200" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="400" Canvas.Bottom="0" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="600" Canvas.Bottom="0" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="100" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="100" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="100" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="100" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="300" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="500" Canvas.Bottom="100" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="700" Canvas.Bottom="100" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="200" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="200" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="200" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="0" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="200" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="400" Canvas.Bottom="200" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="600" Canvas.Bottom="200" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="300" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="300" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="300" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="100" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="300" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="500" Canvas.Bottom="300" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="700" Canvas.Bottom="300" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="400" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="400" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="400" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="0" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="200" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="400" Canvas.Bottom="400" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="600" Canvas.Bottom="400" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="500" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="500" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="500" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="100" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="300" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="500" Canvas.Bottom="500" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="700" Canvas.Bottom="500" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="0" Canvas.Bottom="600" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="200" Canvas.Bottom="600" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="400" Canvas.Bottom="600" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="600" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="0" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="200" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="400" Canvas.Bottom="600" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="600" Canvas.Bottom="600" />
 
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="100" Canvas.Bottom="700" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="300" Canvas.Bottom="700" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="500" Canvas.Bottom="700" />
-            <Rectangle Width="100" Height="100" Fill="Black" Canvas.Left="700" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="100" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="300" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="500" Canvas.Bottom="700" />
+            <Rectangle Width="100" Height="100" Fill="Gray" Canvas.Left="700" Canvas.Bottom="700" />
             <ItemsControl ItemsSource="{Binding Babuk}" 
                           ItemTemplate="{StaticResource MokusPozicio}"/>
 
