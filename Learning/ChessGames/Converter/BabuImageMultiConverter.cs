@@ -23,7 +23,13 @@ namespace ChessGames.Converter
 
                 if (babuSzin)
                 {
-
+                    //fehét
+                    if (babuNev == "Király") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_king.png"), UriKind.Absolute));
+                    if (babuNev == "Gyalog") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_pawn.png"), UriKind.Absolute));
+                    if (babuNev == "Bástya") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_rook.png"), UriKind.Absolute));
+                    if (babuNev == "Futo") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_bishop.png"), UriKind.Absolute));
+                    if (babuNev == "Huszár") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_knight.png"), UriKind.Absolute));
+                    if (babuNev == "Királynő") return new BitmapImage(new Uri(Path.Combine(imageFolder, "white_queen.png"), UriKind.Absolute));
                 }
                 else
                 {
