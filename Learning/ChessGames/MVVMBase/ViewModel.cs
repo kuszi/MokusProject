@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ChessGames.MVVMBase
 {
@@ -20,6 +21,13 @@ namespace ChessGames.MVVMBase
 
         private string _holaBabu;                                                                                              //pozíció
         public string HolaBabu { get { return _holaBabu; } set { _holaBabu = value; OnPropertyChanged(); } }
+
+        private string _input;
+        public string Input { get { return _input; } set { _input = value; OnPropertyChanged(); } }
+
+        private ICommand _stepCommnad;
+        public ICommand StepCommand { get { return _stepCommnad; } set { _stepCommnad = value; OnPropertyChanged(); } }
+
 
         #region Collection
         //32 db bábu kell
@@ -189,7 +197,27 @@ namespace ChessGames.MVVMBase
 
             SelectedBabuk = Babuk[0];
 
+            CreateCommand();
+        }
 
+        private void CreateCommand()
+        {
+            StepCommand = new SimpleCommand(ExecuteStepCommand);
+        }
+
+        private void ExecuteStepCommand()
+        {
+            var values = Input;
+
+            if (values != null && values.Length == 4)
+            {
+                Input = "4 karatkar";
+
+            }   
+            else
+            {
+                Input = "Invalid input érték.";
+            }
         }
     }
 }
