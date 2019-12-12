@@ -218,25 +218,9 @@ namespace ChessGames.MVVMBase
                 var elsoFel = Babuk.FirstOrDefault(x => x.BabuPozicio == first);
                 var masodikFel = Babuk.FirstOrDefault(p => p.BabuPozicio == last);
 
-               // FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
-                if (elsoFel.BabuSzine == true)
-                {
-                    FeketeVagyFeher = "Fehér ";
-                }
-                else
-                {
-                    FeketeVagyFeher = "Fekete ";
-                }
-              //  Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} ";
-
-                if (masodikFel.BabuSzine == true)
-                {
-                    FeketeVagyFeher2 = "Fehér ";
-                }
-                else
-                {
-                    FeketeVagyFeher2 = "Fekete ";
-                }
+                FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
+                FeketeVagyFeher2 = masodikFel.BabuSzine ? "Fehér " : "Fekete";
+               
                 Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} {FeketeVagyFeher2}{masodikFel.BabuNev} ";
 
 
