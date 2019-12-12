@@ -207,17 +207,45 @@ namespace ChessGames.MVVMBase
 
         private void ExecuteStepCommand()
         {
-            var values = Input;
 
-            if (values != null && values.Length == 4)
+
+            if (Input != null && Input.Length == 4)
             {
-                Input = "4 karatkar";
+                string FeketeVagyFeher = "";
+                string FeketeVagyFeher2 = "";
+                var first = Input[0].ToString() + Input[1].ToString();
+                var last = Input[2].ToString() + Input[3].ToString();
+                var elsoFel = Babuk.FirstOrDefault(x => x.BabuPozicio == first);
+                var masodikFel = Babuk.FirstOrDefault(p => p.BabuPozicio == last);
 
-            }   
+               // FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
+                if (elsoFel.BabuSzine == true)
+                {
+                    FeketeVagyFeher = "Fehér ";
+                }
+                else
+                {
+                    FeketeVagyFeher = "Fekete ";
+                }
+              //  Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} ";
+
+                if (masodikFel.BabuSzine == true)
+                {
+                    FeketeVagyFeher2 = "Fehér ";
+                }
+                else
+                {
+                    FeketeVagyFeher2 = "Fekete ";
+                }
+                Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} {FeketeVagyFeher2}{masodikFel.BabuNev} ";
+
+
+            }
             else
             {
                 Input = "Invalid input érték.";
             }
+
         }
     }
 }
