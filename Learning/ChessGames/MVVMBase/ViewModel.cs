@@ -218,10 +218,19 @@ namespace ChessGames.MVVMBase
                 var elsoFel = Babuk.FirstOrDefault(x => x.BabuPozicio == first);
                 var masodikFel = Babuk.FirstOrDefault(p => p.BabuPozicio == last);
 
-                FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
-                FeketeVagyFeher2 = masodikFel.BabuSzine ? "Fehér " : "Fekete";
-               
-                Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} {FeketeVagyFeher2}{masodikFel.BabuNev} ";
+                if (elsoFel != null)
+                {
+                   // FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
+                   // FeketeVagyFeher2 = masodikFel.BabuSzine ? "Fehér " : "Fekete";
+                    //Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} {FeketeVagyFeher2}{masodikFel.BabuNev} ";
+                    elsoFel.BabuPozicio = last;
+                }
+                else
+                {
+                    Input = "Hibás lépés. :S ";
+                }
+
+
 
 
             }
