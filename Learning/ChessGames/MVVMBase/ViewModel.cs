@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -29,7 +30,27 @@ namespace ChessGames.MVVMBase
         public ICommand StepCommand { get { return _stepCommnad; } set { _stepCommnad = value; OnPropertyChanged(); } }
 
         private string _erroMessage;
-        public string ErroMessage { get { return _erroMessage; } set { _erroMessage = value; OnPropertyChanged(); } }
+        public string ErroMessage
+        {
+            get { return _erroMessage; }
+            set
+            {
+                _erroMessage = value;
+                OnPropertyChanged();
+                // 5mp múltva törlö az errormessaget!
+                if (ErroMessage != "")
+                {
+                    Task.Factory.StartNew(() =>
+                    {
+                        Thread.Sleep(5000);
+                        ErroMessage = "";
+                    });
+                }
+            }
+        }
+
+        private bool _lepesSzine = true;
+        public bool LepesSzine { get { return _lepesSzine; } set { _lepesSzine = value; OnPropertyChanged(); } }
 
 
         #region Collection
@@ -211,14 +232,9 @@ namespace ChessGames.MVVMBase
         private void ExecuteStepCommand()
         {
 
-
             if (Input != null && Input.Length == 4)
             {
                 // ** Vegyél fel egy TextBlock-ot az XAML-be, amibe a hibaüzeneteket írod, hogy ne az inputba írd vissza
-
-
-                string FeketeVagyFeher = "";
-                string FeketeVagyFeher2 = "";
 
                 // Az input szétszedése 2 darabra
                 var first = Input[0].ToString() + Input[1].ToString();
@@ -234,6 +250,13 @@ namespace ChessGames.MVVMBase
                 if (elsoFel != null)
                 {
 
+                    // ** ha az elso pozicioban levő bábu szine nem egyezik meg azzal, amivel most lépni kell, akkor hibüzenet és visszatérés
+                    if (elsoFel.BabuSzine != LepesSzine)
+                    {
+                        ErroMessage = "Nem megfelelő a szín.";
+                        return;
+                    }
+
                     // 1. Ha a második pozicióban is van bábu és a színe megegyezik a kezdő színével akkor hibaüzenet
                     if (masodikFel != null && masodikFel.BabuSzine == elsoFel.BabuSzine)
                     {
@@ -247,15 +270,19 @@ namespace ChessGames.MVVMBase
                     {
                         Babuk.Remove(masodikFel);
                     }
-                     
+
                     // bábu mozgatása
                     elsoFel.BabuPozicio = last;
+
+                    // a lépés színe változzon meg az elentétesre (fehér->fekete, fekete->fehér
+                    LepesSzine = !LepesSzine;
+
                 }
                 else
                 {
                     Input = "Hibás lépés. :S ";
                 }
-                         
+
             }
             else
             {
