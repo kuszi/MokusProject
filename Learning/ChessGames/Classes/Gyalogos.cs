@@ -56,8 +56,32 @@ namespace ChessGames
 
         public bool Lephete(string start, string cel)
         {
-            // 
-            return true;
+            // fehér csak felfele mehet 
+            //ha fekete csak lefele mehet
+            if (BabuSzine == true)
+            {
+                var y = cel[1] - start[1];
+                if (y == 1 && start[0] == cel[0])
+                    return true;
+
+                if (y == 2 && start[0] == cel[0] && start[1] == '2')
+                    return true;
+            }
+            else
+            {
+                var y = cel[1] - start[1];
+                if (y == -1 && start[0] == cel[0])
+                    return true;
+
+                if (y == -2 && start[0] == cel[0] && start[1] == '7')
+                    return true;
+            }
+
+
+            //első lépés lehet egy vagy 2
+
+            //léphet átlósan elősre egyet ha azona cél pozición van már bábu
+            return false;
         }
 
         public Gyalogos(string babuNev, bool babuSzin, string babuPozicio)
