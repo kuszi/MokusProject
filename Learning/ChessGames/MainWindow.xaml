@@ -48,7 +48,7 @@
     
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" Tag="0 Text"/>
+            <ColumnDefinition Width="Auto" Tag="0 Text"/>             
             <ColumnDefinition Width="Auto" Tag="1 Table"/>
         </Grid.ColumnDefinitions>
 
@@ -57,8 +57,16 @@
                 <ColumnDefinition Width="Auto" Tag="0 Text"/>
                 <ColumnDefinition Width="Auto" Tag="1 Buttom"/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" MaxHeight="60" MinWidth="100" Text="{Binding Input}"/>
-            <Button Grid.Column="1" MaxHeight="60" MinWidth="100"  Content="Step" Command="{Binding StepCommand}"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>                     
+            
+            <TextBox Grid.Column="0" Grid.Row="0" MaxHeight="60" MinWidth="100" Text="{Binding Input}"/>
+            <Button Grid.Column="1" Grid.Row="0" MaxHeight="60" MinWidth="100"  Content="Step" Command="{Binding StepCommand}"/>
+
+            <TextBlock Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" Text="{Binding ErroMessage}"/>
+
         </Grid>
 
         <!-- Pozició kiirás-->

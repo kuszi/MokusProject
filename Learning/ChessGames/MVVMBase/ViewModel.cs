@@ -28,6 +28,9 @@ namespace ChessGames.MVVMBase
         private ICommand _stepCommnad;
         public ICommand StepCommand { get { return _stepCommnad; } set { _stepCommnad = value; OnPropertyChanged(); } }
 
+        private string _erroMessage;
+        public string ErroMessage { get { return _erroMessage; } set { _erroMessage = value; OnPropertyChanged(); } }
+
 
         #region Collection
         //32 db bábu kell
@@ -211,28 +214,48 @@ namespace ChessGames.MVVMBase
 
             if (Input != null && Input.Length == 4)
             {
+                // ** Vegyél fel egy TextBlock-ot az XAML-be, amibe a hibaüzeneteket írod, hogy ne az inputba írd vissza
+
+
                 string FeketeVagyFeher = "";
                 string FeketeVagyFeher2 = "";
+
+                // Az input szétszedése 2 darabra
                 var first = Input[0].ToString() + Input[1].ToString();
                 var last = Input[2].ToString() + Input[3].ToString();
+
+                // a kezdő pozicióban levő bábu kiszedése a listából
                 var elsoFel = Babuk.FirstOrDefault(x => x.BabuPozicio == first);
+
+                // a második pozicióban levő bábu kiszedése a listából (ez lehet null, ekkor nincs ott bábu)
                 var masodikFel = Babuk.FirstOrDefault(p => p.BabuPozicio == last);
 
+                // ha az első pozición van bábu
                 if (elsoFel != null)
                 {
-                   // FeketeVagyFeher = elsoFel.BabuSzine ? "Fehér " : "Fekete";
-                   // FeketeVagyFeher2 = masodikFel.BabuSzine ? "Fehér " : "Fekete";
-                    //Input = $"{FeketeVagyFeher}{elsoFel.BabuNev} {FeketeVagyFeher2}{masodikFel.BabuNev} ";
+
+                    // 1. Ha a második pozicióban is van bábu és a színe megegyezik a kezdő színével akkor hibaüzenet
+                    if (masodikFel != null && masodikFel.BabuSzine == elsoFel.BabuSzine)
+                    {
+                        ErroMessage = "Hiba van, megegyeztnek a színek.";
+                        return;
+                    }
+
+                    // 2. Ha a második pozicióban van bábu és más a színe akkor második bábut törölni kell a listából
+
+                    if (masodikFel != null && masodikFel.BabuSzine != elsoFel.BabuSzine)
+                    {
+                        Babuk.Remove(masodikFel);
+                    }
+                     
+                    // bábu mozgatása
                     elsoFel.BabuPozicio = last;
                 }
                 else
                 {
                     Input = "Hibás lépés. :S ";
                 }
-
-
-
-
+                         
             }
             else
             {
