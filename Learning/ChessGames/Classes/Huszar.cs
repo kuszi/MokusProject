@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ChessGames
 {
-   public class Huszar : NotifyBase, IBabu
+    public class Huszar : NotifyBase, IBabu
     {
         private string _babuNev;
         public string BabuNev
         {
             get
             {
-               return _babuNev;
+                return _babuNev;
             }
 
             set
@@ -60,6 +60,22 @@ namespace ChessGames
         {
             throw new NotImplementedException();
         }
+
+        public bool Lephete(string start, string cel)
+        {
+            //ha elso karakter 1t valtozkik akkor a masodiknak 2 kell ha az elso 2t valtozik akkor a masodiknak 1et kell
+            var x = Math.Abs(start[0] - cel[0]);
+            var y = Math.Abs(start[1] - cel[1]);
+
+            if (x == 1 && y == 2)
+                return true;
+
+            if (x == 2 && y == 1)
+                return true;
+
+            return false;
+        }
+
         public Huszar(string babuNev, bool babusSzin, string babuPozicio)
         {
             BabuNev = babuNev;

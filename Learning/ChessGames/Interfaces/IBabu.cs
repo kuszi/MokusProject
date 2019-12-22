@@ -13,5 +13,6 @@ namespace ChessGames
         void BabuMozgas();
         string BabuPozicio { get; set; }
         void BabuUtes();
+        bool Lephete(string start, string cel);
     }
 }

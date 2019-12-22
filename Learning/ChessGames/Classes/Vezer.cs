@@ -60,6 +60,23 @@ namespace ChessGames
         {
             throw new NotImplementedException();
         }
+
+        public bool Lephete(string start, string cel)
+        {
+            if (start[0] == cel[0] && start[1] != cel[1])
+                return true;
+
+            if (start[0] != cel[0] && start[1] == cel[1])
+                return true;
+
+            var x = Math.Abs(cel[0] - start[0]);
+            var y = Math.Abs(cel[1] - start[1]);
+            if (x == y)
+                return true;
+           
+            return false;
+        }
+
         public Vezer(string babuNev, bool babuSzin, string babuPozicio)
         {
             BabuNev = babuNev;

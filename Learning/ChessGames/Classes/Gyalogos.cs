@@ -54,6 +54,12 @@ namespace ChessGames
             throw new NotImplementedException();
         }
 
+        public bool Lephete(string start, string cel)
+        {
+            // 
+            return true;
+        }
+
         public Gyalogos(string babuNev, bool babuSzin, string babuPozicio)
         {
             BabuNev = babuNev;

@@ -40,6 +40,22 @@ namespace ChessGames
             throw new NotImplementedException();
         }
 
+        public bool Lephete(string start, string cel)
+        {
+            //szóval ha a start és cél első karakterei megegyeznek akkor a második karaktere nem lehetnek egyformák
+            
+            if (start[0] == cel[0] && start[1] != cel[1])
+                return true;
+
+            //ha a start és a cél első karaktere különbözik akkor a második karakternek egyezniük kell
+            if (start[0] != cel[0] && start[1] == cel[1])  
+                return true;
+
+            // ha egyik sem teljesül akkor hiba van
+
+            return false;
+        }
+
         public Bastya(string babuNev, bool babuSzin, string babuPozício)
         {
             BabuNev = babuNev;

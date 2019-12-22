@@ -273,8 +273,13 @@ namespace ChessGames.MVVMBase
                 return;
             }
 
-            // ** ha az első bábuval nem lehet lépni, akkor hibaüzenet és visszatérés.
+            // ** ha az első bábuval nem lehet lépni, akkor hibaüzenet és visszatérés.               
             // ** pl a bástyával nem lehet a1-ről b2-re lépni.
+            if (elsoFel.Lephete(first, last) == false)
+            {
+                ErroMessage = "Nem léphetsz így.";
+                return;
+            }
 
 
             // Ha a második pozicióban van bábu és más a színe akkor második bábut törölni kell a listából

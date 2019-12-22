@@ -40,7 +40,7 @@ namespace ChessGames
         private bool _babuSzine;
         public bool BabuSzine
         {
-             get
+            get
             {
                 return _babuSzine;
             }
@@ -60,11 +60,28 @@ namespace ChessGames
         {
             throw new NotImplementedException();
         }
+
+        public bool Lephete(string start, string cel)
+        {
+            if (start[0] == cel[0] && start[1] != cel[1] && Math.Abs(start[1] - cel[1]) == 1)
+                return true;
+
+            if (start[0] != cel[0] && start[1] == cel[1] && Math.Abs(start[0] - cel[0]) == 1)
+                return true;
+
+            var x = Math.Abs(cel[0] - start[0]);
+            var y = Math.Abs(cel[1] - start[1]);
+            if (x == y && x == 1)
+                return true;
+
+            return false;
+        }
+
         public Kiraly(string babuNev, bool babuSzin, string babuPozicio)
         {
             BabuNev = babuNev;
             BabuSzine = babuSzin;
             BabuPozicio = babuPozicio;
         }
-}
+    }
 }

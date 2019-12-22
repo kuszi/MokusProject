@@ -60,6 +60,17 @@ namespace ChessGames
             throw new NotImplementedException();
         }
 
+        public bool Lephete(string start, string cel)
+        {
+            //amennyit az első karaktere váltotika startból a célba annyit kell a másodiknak is
+            var x = Math.Abs(cel[0] - start[0]);
+            var y = Math.Abs(cel[1] - start[1]);
+            if (x == y)
+                return true;
+
+            return false;
+        }
+
         public Futo(string babuNev, bool babuszin, string babuPozicio)
         {
             BabuNev = babuNev;
